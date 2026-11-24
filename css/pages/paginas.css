@@ -1,0 +1,117 @@
+/* Subpagina’s */
+
+/* Agenda */
+.agenda-pagina .agenda { border-top: 0; }
+.datalijst { list-style: none; padding: 0; display: grid; border-top: 1px solid rgb(245 230 197 / 0.25); }
+.datalijst li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-1) var(--s-4); padding-block: var(--s-3); border-bottom: 1px solid rgb(245 230 197 / 0.25); }
+.datalijst li span:first-child { font-weight: 700; }
+.datalijst li span:first-child::first-letter { text-transform: uppercase; }
+.datalijst--licht { border-color: var(--c-lijn); }
+.datalijst--licht li { border-color: var(--c-lijn); }
+.beermonday-blok .ondertitel { color: var(--c-salie); }
+
+/* Arrangementen-overzicht */
+.arr-lijst { display: grid; gap: var(--s-9); }
+.arr { display: grid; gap: var(--s-6); align-items: center; }
+@media (min-width: 56rem) {
+  .arr { grid-template-columns: 1.1fr 1fr; gap: var(--s-8); }
+  .arr--om > :first-child { order: 2; }
+}
+.arr h2 a { text-decoration: none; }
+.arr h2 a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: var(--c-goud); }
+.arr__prijs { font-family: var(--f-display); font-size: var(--fs-h3); color: var(--c-olijf); }
+.arr__typo {
+  aspect-ratio: 4 / 3; display: grid; place-items: center; padding: var(--s-6);
+  background: var(--c-bosgroen); color: var(--c-creme); border-radius: 0;
+  font-family: var(--f-display); font-size: clamp(2.5rem, 2rem + 3vw, 4.5rem); line-height: 0.95; text-align: center;
+  background-image: radial-gradient(circle at 50% 120%, var(--c-bosgroen-2) 0 45%, transparent 46%);
+}
+.arr__typo span { border-bottom: var(--lijn-dik) solid var(--c-goud); padding-bottom: 0.05em; }
+
+.arr-menus { display: grid; gap: var(--s-8); }
+@media (min-width: 64rem) { .arr-menus { grid-template-columns: 1fr 1fr; } }
+.gangen { text-align: center; padding: var(--s-7) var(--s-5); border: 2px solid var(--c-goud); border-radius: var(--r-kader); background: #f6f3ec; }
+.gangen__titel { font-size: var(--fs-h2); }
+.gangen__prijs { margin-top: var(--s-2); color: var(--c-oker-tekst); font-weight: 600; }
+.gangen__lijst { list-style: none; padding: 0; margin-top: var(--s-6); display: grid; gap: var(--s-5); border-top: 1px solid var(--c-goud); padding-top: var(--s-6); }
+.gangen__label { display: block; font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--c-oker-tekst); }
+.gangen__naam { display: block; font-family: var(--f-display); font-size: var(--fs-h3); color: var(--c-olijf); line-height: 1.05; margin-top: 0.15rem; }
+.gangen__oms { display: block; margin-top: 0.2rem; }
+
+/* Alpine Gondel Dining */
+.gondel-held { position: relative; }
+.gondel-held__foto img { width: 100%; height: clamp(20rem, 60vh, 44rem); object-fit: cover; object-position: 50% 68%; }
+.gondel-held__band { position: relative; text-align: center; padding: calc(clamp(5.5rem, 4rem + 4vw, 7.5rem) / 2 + var(--s-5)) 0 var(--s-8); }
+.gondel-held__logo { position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); }
+.gondel-held__tekst { display: grid; gap: var(--s-4); justify-items: center; }
+.gondel-held .kruimel ol { justify-content: center; }
+.gondel-held .kruimel a, .gondel-held .kruimel li { color: rgb(245 230 197 / 0.85); }
+.gondel-held .kruimel li + li::before { color: rgb(245 230 197 / 0.5); }
+.gondel-held h1 { font-size: clamp(3rem, 2rem + 5vw, 6rem); }
+.gondel-held .ondertitel { color: var(--c-salie); }
+.gondel-menu h2 { text-align: center; }
+.gondel-menu > .container > .ondertitel { text-align: center; color: var(--c-salie); }
+.gondel-gangen { list-style: none; padding: 0; display: grid; gap: var(--s-6); margin-top: var(--s-7); counter-reset: gang; }
+@media (min-width: 56rem) { .gondel-gangen { grid-template-columns: 1fr 1fr; gap: var(--s-8); } }
+.gondel-gangen li { border-top: var(--lijn-dik) solid var(--c-goud); padding-top: var(--s-5); display: grid; gap: var(--s-2); }
+.gondel-gangen .ondertitel { color: var(--c-goud); }
+.gondel-extras { margin-top: var(--s-8); text-align: center; display: grid; gap: var(--s-3); justify-items: center; }
+.gondel-extras .reeks { justify-content: center; }
+.weetjes { list-style: none; padding: 0; display: grid; gap: var(--s-6); margin-top: var(--s-6); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+.weetjes li { background: var(--c-bosgroen); color: var(--c-creme); padding: var(--s-6) var(--s-5); display: grid; gap: var(--s-2); justify-items: center; text-align: center; }
+.weetjes h3 { color: var(--c-goud); font-size: var(--fs-h3); }
+.weetjes__icoon { width: 7rem; height: auto; margin-bottom: var(--s-2); }
+.gondel-galerij { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); margin-top: var(--s-7); }
+@media (max-width: 40rem) { .gondel-galerij { grid-template-columns: 1fr 1fr; } .gondel-galerij > :last-child { display: none; } }
+
+/* Groepen & De Kluis */
+.kluis__raster { display: grid; gap: var(--s-7); }
+@media (min-width: 64rem) { .kluis__raster { grid-template-columns: 0.8fr 1.2fr; gap: var(--s-8); align-items: start; } .kluis__typo { position: sticky; top: var(--s-6); } }
+.kluis__typo {
+  display: grid; place-content: center; aspect-ratio: 1; max-width: 26rem; width: 100%;
+  border: var(--lijn-dik) solid var(--c-goud); border-radius: 50%;
+  font-family: var(--f-display); text-align: center; line-height: 0.85; color: var(--c-creme);
+  background: repeating-radial-gradient(circle at 50% 50%, transparent 0 18px, rgb(208 165 80 / 0.12) 18px 19px);
+}
+.kluis__typo span:first-child { font-size: clamp(2rem, 1.5rem + 2vw, 3rem); color: var(--c-goud); }
+.kluis__typo span:last-child { font-size: clamp(4.5rem, 3rem + 6vw, 8rem); }
+.kluis__ideeen { padding-left: 1.2rem; display: grid; gap: var(--s-2); }
+.kluis .feiten { border-color: rgb(245 230 197 / 0.5); }
+.bedrijven__paneel { max-width: 52rem; margin-inline: auto; text-align: center; }
+.verenigingen { list-style: none; padding: 0; columns: 2 16rem; column-gap: var(--s-6); }
+.verenigingen li { break-inside: avoid; padding-block: var(--s-2); border-bottom: 1px solid var(--c-lijn); }
+
+/* Over ons */
+.verhaal__raster { display: grid; gap: var(--s-7); }
+@media (min-width: 64rem) { .verhaal__raster { grid-template-columns: 1fr 1fr; gap: var(--s-8); align-items: start; } }
+.verhaal__beelden { position: relative; padding-bottom: var(--s-8); }
+.verhaal__klein { position: absolute; right: var(--s-5); bottom: 0; width: clamp(9rem, 38%, 13rem); }
+.impressie__raster { list-style: none; padding: 0; display: grid; gap: var(--s-3); grid-template-columns: repeat(2, 1fr); margin-top: var(--s-5); }
+@media (min-width: 56rem) { .impressie__raster { grid-template-columns: 3fr 2fr 3fr 2fr; grid-auto-flow: dense; } .impressie__raster li:nth-child(n+5) { grid-column: span 2; } .impressie__raster li:nth-child(5) .foto, .impressie__raster li:nth-child(6) .foto { aspect-ratio: 3 / 2; } }
+.nieuwsbrief .knoppen { margin-top: var(--s-2); }
+.nb-form { display: grid; gap: var(--s-4); max-width: 32rem; }
+.nb-toestemming { display: flex; gap: var(--s-3); align-items: flex-start; font-size: var(--fs-sm); }
+.nb-toestemming input { width: 1.25rem; height: 1.25rem; margin-top: 0.15rem; flex: none; }
+
+/* Contact */
+.contact__raster { display: grid; gap: var(--s-7); }
+@media (min-width: 64rem) { .contact__raster { grid-template-columns: 1fr 1fr 1.1fr; gap: var(--s-7); } }
+.contact__adres { font-style: normal; font-family: var(--f-display); font-size: var(--fs-h3); line-height: 1.1; color: var(--c-olijf); }
+.contact__groot { font-family: var(--f-display); font-size: clamp(1.9rem, 1.4rem + 1.5vw, 2.6rem); line-height: 1.05; }
+.contact__groot a { text-decoration: none; color: var(--c-bosgroen); }
+.contact__groot a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.contact__groot--mail { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); overflow-wrap: anywhere; }
+.contact .tijden + .tijden { margin-top: var(--s-5); }
+
+/* Reserveren */
+.reserveren__actie { display: grid; gap: var(--s-3); justify-items: start; padding: var(--s-6); background: var(--c-bosgroen); color: var(--c-creme); }
+.reserveren__actie a:not(.knop) { color: var(--c-creme); }
+.knop--groot { min-height: 56px; font-size: 1.125rem; padding-inline: 1.8rem; background: var(--c-goud); border-color: var(--c-goud); color: var(--c-bosgroen); }
+.knop--groot:hover { background: var(--c-creme); border-color: var(--c-creme); }
+
+/* Werken bij */
+.vacature-lijsten { display: grid; gap: var(--s-5); }
+.vacature-lijsten h3 { font-family: var(--f-display); font-size: var(--fs-h3); margin-top: 0; }
+
+/* 404 */
+.niet-gevonden .kaartkop__woord { font-size: clamp(6rem, 4rem + 10vw, 12rem); }

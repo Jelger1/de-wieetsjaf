@@ -1,0 +1,39 @@
+{
+  "_uitleg": "Instellingen voor externe koppelingen. Hier staan GEEN geheimen: alleen publieke gegevens. API-tokens horen in omgevingsvariabelen op de server (zie .env.example).",
+  "reserveren": {
+    "aanbieder": "guestplan",
+    "guestplan": {
+      "_bron": "Widgetcode aangeleverd door de eigenaar (24-11-2026) en aanwezig op de huidige site. De accessKey is publiek (staat ook in de huidige broncode).",
+      "accessKey": "9f563a2008503edff53d98bbf3704571d1bc31d9",
+      "script": "https://cdn.guestplan.com/widget.js",
+      "kleur": "#11271B",
+      "locale": "nl",
+      "directeLink": "https://guestplan.io/?i=9f563a2008503edff53d98bbf3704571d1bc31d9",
+      "serviceLink": "https://widget.guestplan.com/?id={service}0{accessKey}&locale=nl",
+      "wachttijdMs": 8000
+    },
+    "telefoonAlsTerugval": true
+  },
+  "bierkaart": {
+    "_uitleg": "modus 'auto': gebruik de API-proxy (/api/bierkaart) als die gegevens levert; anders de officiële Untappd-embed (pas na klik van de bezoeker). 'embed': altijd embed. 'api': nooit embed.",
+    "modus": "auto",
+    "apiPad": "/api/bierkaart",
+    "venueUrl": "https://untappd.com/v/de-wieetsjaf/685582",
+    "embed": {
+      "_bron": "Huidige site: business.untappd.com/embeds/iframes/22030/83945 (22030 = location-ID, 83945 = thema-ID, afgeleid uit het embed-script).",
+      "locationId": 22030,
+      "themeId": 83945,
+      "iframeUrl": "https://business.untappd.com/embeds/iframes/22030/83945"
+    },
+    "verouderdNaUren": 24
+  },
+  "consent": {
+    "_uitleg": "Er draaien standaard geen niet-noodzakelijke cookies of trackers, dus er is geen cookiebanner nodig. Komt er later bijvoorbeeld een Meta Pixel bij: zet 'actief' op true en voeg het script toe met type=\"text/plain\" data-consent=\"marketing\". Het script wordt dan pas geladen na toestemming (zie docs/04-juridische-audit.md).",
+    "actief": false,
+    "categorieen": [
+      { "id": "statistiek", "naam": "Statistieken", "uitleg": "Helpt ons te zien welke pagina’s worden bezocht." },
+      { "id": "marketing", "naam": "Marketing", "uitleg": "Meet het effect van onze advertenties op Facebook en Instagram." }
+    ],
+    "versie": 1
+  }
+}

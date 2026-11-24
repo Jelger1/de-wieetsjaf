@@ -1,0 +1,56 @@
+/* Menukaart: de papieren kaart, maar dan leesbaar op elk scherm */
+.menunav { position: sticky; top: 0; z-index: 15; background: var(--c-papier); border-bottom: 1px solid var(--c-lijn); }
+.menunav__lijst { display: flex; gap: var(--s-5); list-style: none; padding: 0; overflow-x: auto; scrollbar-width: none; }
+.menunav__lijst::-webkit-scrollbar { display: none; }
+.menunav__lijst a { display: block; white-space: nowrap; padding: var(--s-3) 0; font-weight: 700; text-decoration: none; color: var(--c-olijf); border-bottom: var(--lijn-dik) solid transparent; }
+.menunav__lijst a:hover, .menunav__lijst a[aria-current="true"] { border-bottom-color: var(--c-goud); }
+
+.menukaart { padding-block: var(--s-7) var(--sectie); }
+.menukaart__gereedschap { display: grid; gap: var(--s-4); align-items: end; padding: var(--s-5); background: var(--c-paneel); border-radius: var(--r-paneel); margin-bottom: var(--s-6); }
+@media (min-width: 56rem) { .menukaart__gereedschap { grid-template-columns: minmax(16rem, 1.3fr) auto auto; } .menukaart__gereedschap [data-menuteller] { grid-column: 1 / -1; } }
+
+.legenda { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-6); font-size: var(--fs-sm); margin-bottom: var(--s-7); }
+.legenda div { display: flex; align-items: center; gap: var(--s-2); }
+.legenda dt { display: inline-flex; }
+
+.menudeel { padding-block: var(--s-7) var(--s-6); border-top: 1px solid var(--c-lijn); scroll-margin-top: 4rem; }
+.menudeel:first-of-type { border-top: 0; padding-top: 0; }
+.menudeel__kop { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-5); margin-bottom: var(--s-7); }
+.menudeel__kop .kaartkop { margin: 0; flex-wrap: wrap; row-gap: 0; }
+.menudeel__foto { width: clamp(7rem, 22vw, 14rem); flex: none; margin-bottom: calc(var(--s-2) * -1); }
+.kaartkop { display: flex; align-items: flex-end; gap: var(--s-3); color: var(--c-olijf); }
+.kaartkop__woord { font-family: var(--f-display); font-size: var(--fs-display); line-height: 0.78; }
+.kaartkop__tijd { font-family: var(--f-display); font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.5rem); line-height: 1; padding-bottom: 0.15em; white-space: nowrap; }
+
+.menudeel__groepen { display: grid; gap: var(--s-7); }
+@media (min-width: 64rem) {
+  .menudeel__groepen { display: block; columns: 2; column-gap: var(--s-8); }
+  .menudeel__groepen > .menugroep { break-inside: avoid; margin-bottom: var(--s-7); }
+}
+.menugroep { display: grid; gap: var(--s-4); align-content: start; }
+.menugroep > .label { justify-self: start; }
+.menugroep--uitgelicht .paneel { margin-top: 1.6rem; display: grid; gap: var(--s-4); }
+.menugroep--uitgelicht .paneel__titel { display: inline-flex; align-items: center; gap: 0.35rem; }
+.menugroep__intro { font-weight: 600; }
+.menugroep__noot { font-size: var(--fs-sm); font-style: italic; }
+.menugroep .gerecht__oms { color: var(--c-inkt); }
+.menugroep[hidden], .menudeel[hidden] { display: none; }
+
+.menu-onder { display: grid; gap: var(--s-5); margin-top: var(--s-8); }
+@media (min-width: 56rem) { .menu-onder { grid-template-columns: 1.4fr 1fr 1fr; } }
+.menukaart__cta { margin-top: var(--s-8); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-4); padding-top: var(--s-6); border-top: 1px solid var(--c-lijn); }
+
+@media print {
+  .menunav, .menukaart__gereedschap, .site-kop, .site-voet, .actiebalk, .paginakop .kruimel { display: none !important; }
+  .menudeel { break-before: page; border: 0; }
+  .menudeel:first-of-type { break-before: auto; }
+  .menugroep, .gerecht { break-inside: avoid; }
+  .menudeel__groepen { columns: 2; }
+  a::after { content: none !important; }
+}
+
+/* Smalle schermen (320 px): foto naast de grote kop laten vallen, kop iets kleiner */
+@media (max-width: 26rem) {
+  .menudeel__foto { display: none; }
+  .menudeel .kaartkop__woord { font-size: 3.6rem; }
+}

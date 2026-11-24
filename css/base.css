@@ -1,0 +1,99 @@
+/* Basis: reset, typografie, links, focus, toegankelijkheid */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 5rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+body {
+  font-family: var(--f-tekst);
+  font-size: var(--fs-body);
+  line-height: var(--lh-tekst);
+  font-weight: 400;
+  color: var(--c-inkt);
+  background: var(--c-papier);
+  font-variant-numeric: lining-nums;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { flex: 1 0 auto; }
+
+img, picture, svg, video, iframe { display: block; max-width: 100%; }
+img { height: auto; }
+input, button, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+p, li, dd { text-wrap: pretty; overflow-wrap: break-word; }
+h1, h2, h3, h4 { text-wrap: balance; overflow-wrap: break-word; }
+
+/* Koppen in Bebas Neue (alleen kapitalen; geen extra letterspatiëring nodig) */
+h1, h2, h3, .kop {
+  font-family: var(--f-display);
+  font-weight: 400;
+  line-height: var(--lh-kop);
+  letter-spacing: 0.005em;
+  color: var(--c-olijf);
+}
+h1, .kop-1 { font-size: var(--fs-h1); }
+h2, .kop-2 { font-size: var(--fs-h2); }
+h3, .kop-3 { font-size: var(--fs-h3); line-height: 1; }
+h4, .kop-4 { font-family: var(--f-tekst); font-size: var(--fs-h4); font-weight: 700; line-height: 1.3; color: var(--c-olijf); }
+
+p + p { margin-top: 1em; }
+strong, b { font-weight: 700; }
+em, i { font-style: italic; }
+small { font-size: var(--fs-sm); }
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2px; }
+.klein a, .vandaag a, .site-voet a, .kruimel a, .springlijst a, .tekstlink { display: inline-block; padding-block: 0.2rem; }
+.tekst a, p a { color: var(--c-bosgroen); font-weight: 600; }
+
+::selection { background: var(--c-goud); color: var(--c-bosgroen); }
+
+/* Focus: altijd zichtbaar bij toetsenbordgebruik */
+:focus-visible {
+  outline: 3px solid var(--c-focus-licht);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.donker :focus-visible, .donker:focus-visible { outline-color: var(--c-focus-donker); }
+
+/* Alleen voor schermlezers */
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Skiplink */
+.skiplink {
+  position: absolute; left: var(--s-4); top: -10rem; z-index: 100;
+  background: var(--c-bosgroen); color: var(--c-creme); padding: var(--s-3) var(--s-5);
+  font-weight: 700; text-decoration: none; border-radius: var(--r-label);
+}
+.skiplink:focus { top: var(--s-4); }
+
+/* Donkere vlakken */
+.donker { background: var(--c-bosgroen); color: var(--c-creme); }
+.donker h1, .donker h2, .donker h3, .donker h4, .donker .kop { color: var(--c-creme); }
+.donker a { color: var(--c-creme); }
+.donker .tekst a, .donker p a { color: var(--c-creme); }
+
+hr { border: 0; border-top: 1px solid var(--c-lijn); }
+
+[hidden] { display: none !important; }
+.alleen-js { display: none !important; }
+.js .alleen-js { display: revert !important; }
+.js .alleen-js.menukaart__gereedschap { display: grid !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+@media print {
+  .site-kop nav, .actiebalk, .site-voet nav, .knop, .geen-print { display: none !important; }
+  body { background: #fff; color: #000; }
+  a::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.dist-bouw-*/
+dist-oud-*/
+.env
+.cache/
+data/bierkaart.snapshot.json
+test-results/
+playwright-report/
+tests/screenshots/
+*.log

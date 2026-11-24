@@ -1,0 +1,607 @@
+{
+ "interieur-neon": {
+  "varianten": [
+   {
+    "w": 400,
+    "h": 266
+   },
+   {
+    "w": 800,
+    "h": 533
+   }
+  ],
+  "fallback": "interieur-neon-400.jpg",
+  "ratio": 1.5009
+ },
+ "interieur-bar": {
+  "varianten": [
+   {
+    "w": 400,
+    "h": 266
+   },
+   {
+    "w": 800,
+    "h": 533
+   }
+  ],
+  "fallback": "interieur-bar-400.jpg",
+  "ratio": 1.5009
+ },
+ "interieur-tap": {
+  "varianten": [
+   {
+    "w": 400,
+    "h": 266
+   },
+   {
+    "w": 800,
+    "h": 533
+   }
+  ],
+  "fallback": "interieur-tap-400.jpg",
+  "ratio": 1.5009
+ },
+ "interieur-zaal": {
+  "varianten": [
+   {
+    "w": 400,
+    "h": 266
+   },
+   {
+    "w": 800,
+    "h": 533
+   }
+  ],
+  "fallback": "interieur-zaal-400.jpg",
+  "ratio": 1.5009
+ },
+ "interieur-muur": {
+  "varianten": [
+   {
+    "w": 400,
+    "h": 266
+   },
+   {
+    "w": 800,
+    "h": 533
+   }
+  ],
+  "fallback": "interieur-muur-400.jpg",
+  "ratio": 1.5009
+ },
+ "interieur-tafel": {
+  "varianten": [
+   {
+    "w": 400,
+    "h": 266
+   },
+   {
+    "w": 800,
+    "h": 533
+   }
+  ],
+  "fallback": "interieur-tafel-400.jpg",
+  "ratio": 1.5009
+ },
+ "team-tap": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 442
+   },
+   {
+    "w": 600,
+    "h": 884
+   }
+  ],
+  "fallback": "team-tap-300.jpg",
+  "ratio": 0.6787
+ },
+ "team-wijnwand": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 462
+   },
+   {
+    "w": 600,
+    "h": 924
+   }
+  ],
+  "fallback": "team-wijnwand-300.jpg",
+  "ratio": 0.6494
+ },
+ "team-fridge": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 468
+   },
+   {
+    "w": 600,
+    "h": 935
+   }
+  ],
+  "fallback": "team-fridge-300.jpg",
+  "ratio": 0.6417
+ },
+ "team-dienblad": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 445
+   },
+   {
+    "w": 600,
+    "h": 890
+   }
+  ],
+  "fallback": "team-dienblad-300.jpg",
+  "ratio": 0.6742
+ },
+ "gasten": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 436
+   },
+   {
+    "w": 600,
+    "h": 872
+   }
+  ],
+  "fallback": "gasten-300.jpg",
+  "ratio": 0.6881
+ },
+ "lunchplank": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 440
+   },
+   {
+    "w": 600,
+    "h": 881
+   }
+  ],
+  "fallback": "lunchplank-300.jpg",
+  "ratio": 0.681
+ },
+ "cocktails": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 897
+   }
+  ],
+  "fallback": "cocktails-300.jpg",
+  "ratio": 0.6689
+ },
+ "bierfles": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 444
+   },
+   {
+    "w": 600,
+    "h": 887
+   }
+  ],
+  "fallback": "bierfles-300.jpg",
+  "ratio": 0.6764
+ },
+ "gerecht-salade": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 895
+   }
+  ],
+  "fallback": "gerecht-salade-300.jpg",
+  "ratio": 0.6704
+ },
+ "gerecht-dessert": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 445
+   },
+   {
+    "w": 600,
+    "h": 890
+   }
+  ],
+  "fallback": "gerecht-dessert-300.jpg",
+  "ratio": 0.6742
+ },
+ "gerecht-wild": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 445
+   },
+   {
+    "w": 600,
+    "h": 890
+   }
+  ],
+  "fallback": "gerecht-wild-300.jpg",
+  "ratio": 0.6742
+ },
+ "gerechten-tafel": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 450
+   },
+   {
+    "w": 600,
+    "h": 901
+   }
+  ],
+  "fallback": "gerechten-tafel-300.jpg",
+  "ratio": 0.6659
+ },
+ "koffie-gebak": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 897
+   }
+  ],
+  "fallback": "koffie-gebak-300.jpg",
+  "ratio": 0.6689
+ },
+ "ontbijtplank": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 896
+   }
+  ],
+  "fallback": "ontbijtplank-300.jpg",
+  "ratio": 0.6696
+ },
+ "wijnen": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 896
+   }
+  ],
+  "fallback": "wijnen-300.jpg",
+  "ratio": 0.6696
+ },
+ "burger": {
+  "varianten": [
+   {
+    "w": 263,
+    "h": 270
+   },
+   {
+    "w": 526,
+    "h": 540
+   }
+  ],
+  "fallback": "burger-263.jpg",
+  "ratio": 0.9741
+ },
+ "cuvee": {
+  "varianten": [
+   {
+    "w": 263,
+    "h": 263
+   },
+   {
+    "w": 526,
+    "h": 526
+   }
+  ],
+  "fallback": "cuvee-263.jpg",
+  "ratio": 1.0
+ },
+ "chefsmenu": {
+  "varianten": [
+   {
+    "w": 256,
+    "h": 320
+   },
+   {
+    "w": 512,
+    "h": 640
+   }
+  ],
+  "fallback": "chefsmenu-256.jpg",
+  "ratio": 0.8
+ },
+ "gondel-01": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 720
+   },
+   {
+    "w": 800,
+    "h": 1200
+   },
+   {
+    "w": 1200,
+    "h": 1800
+   },
+   {
+    "w": 1600,
+    "h": 2400
+   }
+  ],
+  "fallback": "gondel-01-480.jpg",
+  "ratio": 0.6667
+ },
+ "gondel-03": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 720
+   },
+   {
+    "w": 800,
+    "h": 1200
+   },
+   {
+    "w": 1200,
+    "h": 1800
+   },
+   {
+    "w": 1600,
+    "h": 2400
+   }
+  ],
+  "fallback": "gondel-03-480.jpg",
+  "ratio": 0.6667
+ },
+ "gondel-04": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 720
+   },
+   {
+    "w": 800,
+    "h": 1200
+   },
+   {
+    "w": 1200,
+    "h": 1800
+   },
+   {
+    "w": 1600,
+    "h": 2400
+   }
+  ],
+  "fallback": "gondel-04-480.jpg",
+  "ratio": 0.6667
+ },
+ "gondel-06": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 720
+   },
+   {
+    "w": 800,
+    "h": 1200
+   },
+   {
+    "w": 1200,
+    "h": 1800
+   },
+   {
+    "w": 1600,
+    "h": 2400
+   }
+  ],
+  "fallback": "gondel-06-480.jpg",
+  "ratio": 0.6667
+ },
+ "gondel-07": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 1014
+   },
+   {
+    "w": 800,
+    "h": 1690
+   },
+   {
+    "w": 1200,
+    "h": 2535
+   }
+  ],
+  "fallback": "gondel-07-480.jpg",
+  "ratio": 0.4733
+ },
+ "gondel-09": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 720
+   },
+   {
+    "w": 800,
+    "h": 1200
+   },
+   {
+    "w": 1200,
+    "h": 1800
+   },
+   {
+    "w": 1600,
+    "h": 2400
+   }
+  ],
+  "fallback": "gondel-09-480.jpg",
+  "ratio": 0.6667
+ },
+ "gondel-11": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 720
+   },
+   {
+    "w": 800,
+    "h": 1200
+   },
+   {
+    "w": 1200,
+    "h": 1800
+   },
+   {
+    "w": 1600,
+    "h": 2400
+   }
+  ],
+  "fallback": "gondel-11-480.jpg",
+  "ratio": 0.6667
+ },
+ "sanctus-tap": {
+  "varianten": [
+   {
+    "w": 480,
+    "h": 707
+   },
+   {
+    "w": 800,
+    "h": 1179
+   },
+   {
+    "w": 1200,
+    "h": 1768
+   }
+  ],
+  "fallback": "sanctus-tap-480.jpg",
+  "ratio": 0.6788
+ },
+ "lens-fusion": {
+  "varianten": [
+   {
+    "w": 240,
+    "h": 240
+   },
+   {
+    "w": 480,
+    "h": 480
+   }
+  ],
+  "fallback": "lens-fusion-240.png",
+  "ratio": 1.0
+ },
+ "lens-mordax": {
+  "varianten": [
+   {
+    "w": 240,
+    "h": 240
+   },
+   {
+    "w": 480,
+    "h": 480
+   }
+  ],
+  "fallback": "lens-mordax-240.png",
+  "ratio": 1.0
+ },
+ "lens-equinox": {
+  "varianten": [
+   {
+    "w": 240,
+    "h": 240
+   },
+   {
+    "w": 480,
+    "h": 480
+   }
+  ],
+  "fallback": "lens-equinox-240.png",
+  "ratio": 1.0
+ },
+ "logo-rond": {
+  "varianten": [
+   {
+    "w": 128,
+    "h": 128
+   },
+   {
+    "w": 256,
+    "h": 255
+   }
+  ],
+  "fallback": "logo-rond-128.png",
+  "ratio": 1.002
+ },
+ "dameszietsong": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 896
+   }
+  ],
+  "fallback": "ontbijtplank-300.jpg",
+  "ratio": 0.6696,
+  "alias": "ontbijtplank"
+ },
+ "herrezietsong": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 896
+   }
+  ],
+  "fallback": "ontbijtplank-300.jpg",
+  "ratio": 0.6696,
+  "alias": "ontbijtplank"
+ },
+ "autumn-high-wine": {
+  "varianten": [
+   {
+    "w": 300,
+    "h": 448
+   },
+   {
+    "w": 600,
+    "h": 896
+   }
+  ],
+  "fallback": "wijnen-300.jpg",
+  "ratio": 0.6696,
+  "alias": "wijnen"
+ }
+}

@@ -1,0 +1,116 @@
+{
+  "_uitleg": "Agenda. Een evenement verdwijnt automatisch van de site zodra 'eind' (of 'start') voorbij is. Datum/tijd als 'JJJJ-MM-DDTHH:MM' (lokale tijd Kerkrade). Laat 'tijd' leeg als de tijd onbekend is: dan toont de site alleen de datum. 'bevestigd': alleen bevestigde evenementen krijgen Google-structured data. 'afbeelding' verwijst naar een sleutel in data/afbeeldingen.json. Nieuwe evenementen: kopieer een blok en pas het aan (zie docs/09-beheerhandleiding.md).",
+  "terugkerend": [
+    {
+      "id": "beermonday",
+      "titel": "Beermonday",
+      "regel": "eerste-maandag",
+      "tijd": "20:00",
+      "kort": "Elke eerste maandag van de maand. Vrije inloop: een brouwerij komt langs, je krijgt 2 proefglazen en we proeven samen.",
+      "omschrijving": "Op Beermonday ontvangen we elke eerste maandag van de maand een brouwerij. Die vertelt over haar bieren en jij proeft mee. Vrije inloop vanaf 20:00 uur, met 2 proefglazen. Welke brouwerij er komt, maken we vooraf bekend op Instagram en Facebook.",
+      "bron": "Voorstel Pure Minds (nov. 2026) en bericht 'Beermonday is terug' (aug. 2026)",
+      "uitzonderingen": [],
+      "brouwerijPerDatum": {}
+    }
+  ],
+  "evenementen": [
+    {
+      "id": "volkstoneel-menu-2026",
+      "titel": "Volkstoneel-menu",
+      "start": "2026-11-26",
+      "eind": "2026-11-28",
+      "tijd": "16:00",
+      "datumTekst": "Donderdag 26 t/m zaterdag 28 november 2026, aanvang tussen 16.00 en 17.30 uur",
+      "kort": "Een 3-gangenmenu van € 40,50 voorafgaand aan de voorstelling.",
+      "omschrijving": "Maak er een complete avond van. Voorafgaand aan de voorstelling serveren we een 3-gangenmenu voor € 40,50. Schuif aan, geniet samen van lekker eten en kom alvast in de stemming voor een mooie avond.",
+      "prijs": "€ 40,50 p.p. (3 gangen)",
+      "prijsWaarde": 40.5,
+      "reserveren": {
+        "verplicht": true,
+        "via": "guestplan",
+        "guestplanService": "JZUP2ap"
+      },
+      "afbeelding": "gerecht-wild",
+      "bron": "Guestplan-service 'Volkstoneel Menu' (publieke widget-API, 24-11-2026). Welke voorstelling/locatie: te bevestigen.",
+      "bevestigd": true
+    },
+    {
+      "id": "autumn-high-wine-2026",
+      "titel": "Autumn High Wine",
+      "start": "2026-11-28",
+      "eind": "2026-11-29",
+      "tijd": null,
+      "datumTekst": "Zaterdag 28 & zondag 29 november 2026",
+      "kort": "5 wijnen, elk met een bijpassend gerechtje. Vol = vol.",
+      "omschrijving": "De combinatie van herfstige gezelligheid, mooie wijnen en smaakvolle gerechtjes. Proef 5 wijnen, elk met een bijpassend gerecht. Trommel je vrienden, familie of favoriete wijnliefhebber op voor een middag of avond aan tafel.",
+      "prijs": null,
+      "reserveren": {
+        "verplicht": true,
+        "via": "guestplan"
+      },
+      "afbeelding": "autumn-high-wine",
+      "bron": "wieetsjaf.nl/autumn-high-wine-bij-de-wieetsjaf (1 nov. 2026)",
+      "bevestigd": true
+    },
+    {
+      "id": "kerst-2026",
+      "titel": "Kerstdiner op 1e & 2e Kerstdag",
+      "start": "2026-12-25",
+      "eind": "2026-12-26",
+      "tijd": "18:00",
+      "datumTekst": "Vrijdag 25 & zaterdag 26 december 2026, aanvang tussen 18.00 en 19.00 uur",
+      "kort": "Kerstmenu van zes gangen (€ 89,50 p.p.) of vegetarisch (€ 79,50 p.p.). Reserveren is verplicht, met € 25 p.p. aanbetaling.",
+      "omschrijving": "Op 1e en 2e Kerstdag schuif je bij ons aan voor het kerstmenu 2026: zes gangen inclusief amuses, koffie en friandises. Er is ook een volledig vegetarisch kerstmenu.",
+      "prijs": "Vanaf € 79,50 p.p.",
+      "reserveren": {
+        "verplicht": true,
+        "via": "guestplan",
+        "guestplanService": "4MgTmJ4"
+      },
+      "link": "/arrangementen/kerstmenu-2026/",
+      "afbeelding": "gondel-07",
+      "bron": "wieetsjaf.nl/kerst-samen-natuurlijk en /kerstmenu-2026",
+      "bevestigd": true
+    },
+    {
+      "id": "dameszietsong-ontbijt-2027",
+      "titel": "Dameszietsong-ontbijt",
+      "start": "2027-01-24T09:00",
+      "eind": "2027-01-24T12:00",
+      "eindOnbekend": true,
+      "tijd": "09:00",
+      "datumTekst": "Zondag 24 januari 2027, aanvang 09:00 uur",
+      "kort": "Samen ontbijten, bijkletsen en alvast in de carnavalsstemming komen. € 15,11 p.p. (excl. drankjes).",
+      "omschrijving": "Het jaarlijkse Dameszietsong-ontbijt: gezellig samen ontbijten, lekker bijkletsen en natuurlijk alvast in de stemming komen. Reserveren is verplicht en vol is vol.",
+      "prijs": "€ 15,11 p.p. (excl. drankjes)",
+      "prijsWaarde": 15.11,
+      "reserveren": {
+        "verplicht": true,
+        "via": "guestplan"
+      },
+      "afbeelding": "dameszietsong",
+      "bron": "wieetsjaf.nl/de-jaarlijkse-dames-en-herrezietsong-ontbijtjes (12 nov. 2026)",
+      "bevestigd": true
+    },
+    {
+      "id": "herrezietsong-ontbijt-2027",
+      "titel": "Herrezietsong-ontbijt",
+      "start": "2027-01-31T09:00",
+      "eind": "2027-01-31T12:00",
+      "eindOnbekend": true,
+      "tijd": "09:00",
+      "datumTekst": "Zondag 31 januari 2027, aanvang 09:00 uur",
+      "kort": "Het jaarlijkse ontbijt voor de heren, in aanloop naar carnaval. € 15,11 p.p. (excl. drankjes).",
+      "omschrijving": "Het jaarlijkse Herrezietsong-ontbijt: samen ontbijten en alvast in de stemming komen voor carnaval. Reserveren is verplicht en vol is vol.",
+      "prijs": "€ 15,11 p.p. (excl. drankjes)",
+      "prijsWaarde": 15.11,
+      "reserveren": {
+        "verplicht": true,
+        "via": "guestplan"
+      },
+      "afbeelding": "herrezietsong",
+      "bron": "wieetsjaf.nl/de-jaarlijkse-dames-en-herrezietsong-ontbijtjes (12 nov. 2026)",
+      "bevestigd": true
+    }
+  ]
+}

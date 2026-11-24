@@ -1,0 +1,32 @@
+/* Bierlijst (bierkaartpagina en voorproefje op de homepage) */
+.bierkaart__kop { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--s-3) var(--s-6); margin-bottom: var(--s-5); }
+.bierkaart__gereedschap { display: grid; gap: var(--s-4); margin-bottom: var(--s-6); padding: var(--s-5); background: var(--c-paneel); border-radius: var(--r-paneel); }
+@media (min-width: 56rem) { .bierkaart__gereedschap { grid-template-columns: minmax(16rem, 1fr) 2fr; align-items: end; } .bierkaart__gereedschap [data-bierteller] { grid-column: 1 / -1; } }
+
+.biersectie + .biersectie { margin-top: var(--s-7); }
+.biersectie__kop { display: inline-block; font-family: var(--f-tekst); font-size: 1.125rem; font-weight: 700; line-height: 1.25; padding: 0.3rem 0.8rem 0.25rem; border-radius: var(--r-label); background: var(--c-olijf); color: var(--c-papier) !important; margin-bottom: var(--s-3); }
+.donker .biersectie__kop { background: var(--c-creme); color: var(--c-bosgroen) !important; }
+.bieren { list-style: none; padding: 0; display: grid; }
+@media (min-width: 56rem) { .bierkaart .bieren { grid-template-columns: 1fr 1fr; column-gap: var(--s-7); } }
+.bier { display: grid; grid-template-columns: 2.4rem 1fr; gap: 0 var(--s-3); padding-block: var(--s-3); border-bottom: 1px solid var(--c-lijn); align-items: start; }
+.donker .bier { border-color: rgb(245 230 197 / 0.18); }
+.bier__tap { font-family: var(--f-display); font-size: 1.6rem; line-height: 1; text-align: center; padding-top: 0.15rem; color: var(--c-goud); }
+.bierkaart .bier__tap { color: var(--c-oker-tekst); }
+.bier__naam { font-weight: 700; font-size: 1.0625rem; line-height: 1.3; }
+.bier__brouwerij, .bier__meta { font-size: var(--fs-sm); line-height: 1.4; }
+.bier__meta { opacity: 0.9; }
+.bier__prijs { grid-column: 2; font-size: var(--fs-sm); font-variant-numeric: tabular-nums; margin-top: var(--s-1); font-weight: 600; }
+.bier__nieuw { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.1rem 0.4rem; border: 1.5px solid currentColor; border-radius: var(--r-label); vertical-align: 0.15em; margin-left: 0.25rem; }
+.bierbijgewerkt { margin-top: var(--s-5); }
+.bierleeg { display: grid; gap: var(--s-3); max-width: 38rem; }
+.donker .bierpreview .bier__naam { color: var(--c-creme); }
+
+.bierembed { margin-top: var(--s-6); display: grid; gap: var(--s-5); }
+.bierembed__iframe { width: 100%; height: min(85vh, 60rem); border: 0; background: #fff; border-radius: var(--r-kader); }
+.nix { font-weight: 600; }
+.sanctus .lenzen h3 { color: var(--c-creme); }
+
+.biercijfers { list-style: none; padding: 0; display: grid; gap: var(--s-4); margin-bottom: var(--s-3); }
+@media (min-width: 40rem) { .biercijfers { grid-template-columns: repeat(3, 1fr); gap: var(--s-5); } }
+.biercijfers li { display: grid; gap: var(--s-1); border-top: var(--lijn-dik) solid var(--c-goud); padding-top: var(--s-3); }
+.biercijfers__getal { font-family: var(--f-display); font-size: clamp(3rem, 2rem + 3vw, 4.5rem); line-height: 0.9; color: var(--c-creme); }

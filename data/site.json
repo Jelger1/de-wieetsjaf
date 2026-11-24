@@ -1,0 +1,49 @@
+{
+  "_uitleg": "Centrale bedrijfsgegevens. Alles wat hier staat verschijnt op meerdere plekken (header, footer, contact, structured data). Velden met null worden niet getoond. Bron per veld: zie docs/02-huidige-website-audit.md.",
+  "naam": "Dé Wieëtsjaf",
+  "naamZonderAccenten": "De Wieetsjaf",
+  "omschrijving": "Restaurant, café en speciaalbierzaak aan de Markt in Kerkrade. Lunch, diner, borrel en feestzaal, met meer dan 200 bieren en 50 wijnen in de walk-in fridge.",
+  "sinds": 2008,
+  "url": "https://www.wieetsjaf.nl",
+  "adres": {
+    "straat": "Markt 47",
+    "postcode": "6461 ED",
+    "plaats": "Kerkrade",
+    "land": "NL",
+    "regio": "Limburg"
+  },
+  "geo": {
+    "_bron": "Coördinaten uit de Google Maps Street View-embed op de huidige impressiepagina; eigenaar laten bevestigen.",
+    "lat": 50.86462,
+    "lng": 6.06159
+  },
+  "telefoon": {
+    "weergave": "045 888 85 42",
+    "e164": "+31458888542"
+  },
+  "email": "info@wieetsjaf.nl",
+  "social": {
+    "instagram": "https://www.instagram.com/wieetsjaf/",
+    "facebook": "https://www.facebook.com/Wieetsjaf/",
+    "untappd": "https://untappd.com/v/de-wieetsjaf/685582"
+  },
+  "routeUrl": "https://www.google.com/maps/dir/?api=1&destination=Markt+47%2C+6461+ED+Kerkrade",
+  "kaartUrl": "https://maps.app.goo.gl/WiMbP4GzYacAb5ZV6",
+  "juridisch": {
+    "_uitleg": "In te vullen door de eigenaar. Niet raden. Zolang een veld null is, toont de site het niet en geeft de build een waarschuwing.",
+    "statutaireNaam": null,
+    "kvkNummer": null,
+    "btwId": null,
+    "_aanwijzing": "In de loyaltyvoorwaarden staat 'Holding De Wieetsjaf bv, gevestigd op markt 47, 6461ED te Kerkrade'. Niet geverifieerd in het Handelsregister."
+  },
+  "cadeaukaart": {
+    "_uitleg": "Cadeaukaart via GiveACard (webshop) en saldocheck via Loyalty in a Box, beide overgenomen van de huidige site. Shop-URL nog niet bekend: aanleveren door eigenaar.",
+    "shopUrl": null,
+    "saldoUrl": "https://service2.loyaltyinabox.com/CardBalanceChecker/2/paymentapi.aspx?cmd=showbalance&username=70101&lang=nl-NL&responsive=1"
+  },
+  "nieuwsbrief": {
+    "_uitleg": "De huidige inschrijving loopt via MailPoet (WordPress). Na de overstap is een nieuwe aanbieder nodig. Vul hier de form-action in zodra die er is; tot die tijd toont de site geen formulier.",
+    "formAction": null,
+    "aanbieder": null
+  }
+}

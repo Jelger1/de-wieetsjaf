@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Design tokens – Dé Wieëtsjaf
+   Bron kleuren: Instagram-huisstijl (bosgroen, crème, goud, salie; zie
+   'Instagram Alpine Gondel Dining/_bron/README.md') en de menukaart 2026
+   (papier, inkt, paneel; gemeten in de menukaartafbeeldingen).
+   Wijzig kleuren en lettertypes alleen hier.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("/assets/fonts/bebas-neue.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/assets/fonts/hanken-grotesk.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/assets/fonts/hanken-grotesk-italic.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+/* Metrisch passende terugval, zodat er bij het laden van de fonts geen verspringing is */
+@font-face {
+  font-family: "Bebas fallback";
+  src: local("Arial Narrow"), local("Roboto Condensed"), local("Helvetica Neue Condensed Bold"), local("Arial");
+  size-adjust: 78%;
+  ascent-override: 115%;
+}
+@font-face {
+  font-family: "Hanken fallback";
+  src: local("Arial"), local("Helvetica Neue"), local("Helvetica");
+  size-adjust: 99%;
+  ascent-override: 98%;
+  descent-override: 25%;
+}
+
+:root {
+  /* — Merkkleuren — */
+  --c-bosgroen: #11271b;     /* primaire donkere kleur (social, vlakken) */
+  --c-bosgroen-2: #1a3828;   /* berglijn-tint uit de Alpine-elementen */
+  --c-bosgroen-3: #163222;
+  --c-creme: #f5e6c5;        /* tekst/vlakken op donker */
+  --c-goud: #d0a550;         /* accent: strepen, details, tekst op donker */
+  --c-salie: #a3b295;        /* rustig accent op donker */
+
+  /* — Menukaart — */
+  --c-papier: #f1eee7;       /* ondergrond menukaart */
+  --c-paneel: #ebe2d3;       /* uitgelichte vlakken (Lunchplankje, specials) */
+  --c-inkt: #30312c;         /* lopende tekst op papier */
+  --c-olijf: #3e4336;        /* koppen en labels op de kaart */
+  --c-lijn: #c9bfae;         /* dunne scheidingslijnen op papier */
+  --c-oker-tekst: #7d5a17;   /* goud verdonkerd voor kleine tekst op papier (contrast 5,42:1) */
+
+  /* — Functioneel — */
+  --c-focus-licht: #11271b;
+  --c-focus-donker: #f5e6c5;
+  --c-fout: #9b2c1d;
+  --c-testdata: #b3261e;
+
+  /* — Typografie — */
+  --f-display: "Bebas Neue", "Bebas fallback", "Arial Narrow", sans-serif;
+  --f-tekst: "Hanken Grotesk", "Hanken fallback", Arial, sans-serif;
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-body: 1.0625rem;
+  --fs-lead: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem);
+  --fs-h4: 1.1875rem;
+  --fs-h3: clamp(1.625rem, 1.3rem + 1vw, 2rem);
+  --fs-h2: clamp(2.375rem, 1.6rem + 2.8vw, 3.75rem);
+  --fs-h1: clamp(2.875rem, 1.8rem + 4.2vw, 5.25rem);
+  --fs-display: clamp(4.25rem, 2.2rem + 8.4vw, 9.5rem); /* 'LUNCH', 'DINER' zoals op de kaart */
+
+  --lh-tekst: 1.6;
+  --lh-kop: 0.95;
+
+  /* — Ruimte — */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4.5rem;
+  --s-9: 6.5rem;
+  --sectie: clamp(3.5rem, 2rem + 6vw, 7.5rem);
+  --goot: clamp(1.25rem, 0.6rem + 3vw, 3rem);
+  --max: 76rem;
+  --max-tekst: 38rem;
+
+  /* — Vormen: bewust verschillend per type, zoals op de kaart — */
+  --r-label: 3px;      /* labels en knoppen: bijna haaks (sectielabels menukaart) */
+  --r-paneel: 14px;    /* beige panelen (Lunchplankje, specials) */
+  --r-kader: 10px;     /* okerkleurige kaders (allergenen, extra’s) */
+  --lijn-dik: 3px;     /* gouden streep onder accentwoord */
+
+  --schaduw-foto: 0 1px 0 rgb(0 0 0 / 0.04);
+  --balk-hoogte: 64px; /* mobiele actiebalk */
+  --duur: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duur: 0ms; }
+}

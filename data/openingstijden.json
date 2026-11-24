@@ -1,0 +1,33 @@
+{
+  "_uitleg": "Openingstijden van de zaak en de keuken. Tijden in 24-uursnotatie (HH:MM). '00:00' als sluittijd betekent middernacht. Dagen: ma, di, wo, do, vr, za, zo. Uitzonderingen (feestdagen, sluiting) zet je onder 'afwijkend' met een datum (JJJJ-MM-DD). Bron: huidige website (contactpagina en footer), november 2026.",
+  "tijdzone": "Europe/Amsterdam",
+  "zaak": {
+    "ma": ["12:00", "23:00"],
+    "di": ["11:00", "23:00"],
+    "wo": ["11:00", "23:00"],
+    "do": ["11:00", "23:00"],
+    "vr": ["10:00", "00:00"],
+    "za": ["10:00", "00:00"],
+    "zo": ["10:00", "22:00"]
+  },
+  "keuken": {
+    "_let_op": "De huidige site zegt 'dagelijks 11.00–20.00', de menukaartpagina zegt 'maandag 12.00–20.00'. Hier aangehouden: maandag vanaf 12.00 (de zaak opent dan pas). Laten bevestigen.",
+    "ma": ["12:00", "20:00"],
+    "di": ["11:00", "20:00"],
+    "wo": ["11:00", "20:00"],
+    "do": ["11:00", "20:00"],
+    "vr": ["11:00", "20:00"],
+    "za": ["11:00", "20:00"],
+    "zo": ["11:00", "20:00"]
+  },
+  "afwijkend": [
+    {
+      "_voorbeeld": "Zo voeg je een afwijkende dag toe. Dit voorbeeld staat uit (actief: false).",
+      "datum": "2026-12-31",
+      "zaak": ["10:00", "18:00"],
+      "keuken": null,
+      "label": "Oudejaarsdag",
+      "actief": false
+    }
+  ]
+}

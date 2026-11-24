@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M0 175 L120 95 L205 150 L330 42 L450 140 L560 72 L700 155 L825 60 L955 145 L1080 85 V300 H0 Z" fill="#1A3828" stroke="none"/>
+  <path d="M302 66 L330 42 L360 68 L346 64 L330 76 L316 64 Z M537 92 L560 72 L586 96 L572 92 L560 100 L548 92 Z
+           M800 82 L825 60 L852 86 L838 82 L825 90 L812 82 Z M98 110 L120 95 L142 110 L130 108 L120 114 L110 108 Z
+           M1060 97 L1080 85 V100 L1070 104 Z" fill="#F5E6C5" opacity=".55" stroke="none"/>
+  <path d="M0 245 L150 178 L300 232 L470 160 L640 238 L800 186 L960 240 L1080 206 V300 H0 Z" fill="#163222" stroke="none"/>
+</svg>

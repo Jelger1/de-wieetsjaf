@@ -1,0 +1,236 @@
+{
+  "_uitleg": "De vaste menukaart. Bron: menukaartafbeeldingen 1-9 op wieetsjaf.nl/menukaart (oktober 2026), letterlijk overgenomen; redactionele correcties staan in docs/09-beheerhandleiding.md. Prijzen in euro (getal met punt als decimaal). 'favoriet' = hartje op de kaart, 'streek' = locatiepin (lokaal recept), 'veg' = 'V' (vegetarisch) of 'V*' (vegetarisch mogelijk). Allergenen: zie 'allergenen' onderaan.",
+  "versie": "2026-10",
+  "bijgewerkt": "2026-10-05",
+  "prijsnotitie": "Prijzen in euro, inclusief btw.",
+  "intro": "Welkom bij Dé Wieëtsjaf, dé ontmoetingsplek van Kerkrade. Of je nu komt voor een snelle lunch, uitgebreid diner, borrel of een feestje, bij ons voel je je altijd thuis.",
+  "kaarten": [
+    {
+      "id": "lunch",
+      "titel": "Lunch",
+      "tijden": "11.00 – 17.00 uur",
+      "groepen": [
+        {
+          "id": "lunchplankje",
+          "titel": "Lunchplankje",
+          "stijl": "uitgelicht",
+          "favoriet": true,
+          "intro": "Kies 3 gerechten voor 16,50. Extra gerecht 5,50.",
+          "prijzen": [{ "label": "3 gerechten", "prijs": 16.5 }, { "label": "extra gerecht", "prijs": 5.5 }],
+          "noot": "Deze gerechtjes worden bijna allemaal geserveerd met waldkornbrood van onze huisbakkerij Curfs. Glutenvrij brood is ook mogelijk.",
+          "items": [
+            { "naam": "Preitaartje", "omschrijving": "Truffel", "veg": "V" },
+            { "naam": "Steamed Bun", "omschrijving": "Konijn op Aziatische wijze" },
+            { "naam": "Eggs Benedict", "omschrijving": "Brioche, gepocheerd eitje, hollandaise & bacon", "toeslag": 0.5, "veg": "V*" },
+            { "naam": "Runderkroketje", "omschrijving": "Mosterdmayonaise", "toeslag": 0.75 },
+            { "naam": "Verse tonijnsalade", "omschrijving": "Paprika, rode ui, kappertjes & rucola" },
+            { "naam": "Flammkuchen", "omschrijving": "Zalm, roomkaas, crème fraîche, zoetzure ui & rucola", "toeslag": 0.5 },
+            { "naam": "Mini Pinsa Margarita", "omschrijving": "Mozzarella, tomaat, basilicum & rucola" },
+            { "naam": "Mini carpaccio", "omschrijving": "Parmezaanse kaas & truffelmayo" },
+            { "naam": "Tramezzino", "omschrijving": "Italiaans witbrood met pittig gehakt uit de oven" },
+            { "naam": "Salade Caesar", "omschrijving": "Kip, crème van ansjovis, Parmezaanse kaas & crumble van spek" },
+            { "naam": "Miniburger", "omschrijving": "Heuvelangus, spek, augurk, tomaat, kaas, ui, sla & huisgemaakte saus", "toeslag": 0.5 },
+            { "naam": "Brieloempia", "omschrijving": "Vijgencompote", "veg": "V" },
+            { "naam": "Soep naar keuze", "omschrijving": "Vraag ernaar bij ons team", "veg": "V*" }
+          ]
+        },
+        {
+          "id": "broodjes",
+          "titel": "Broodjes",
+          "items": [
+            { "naam": "Hartige muffin", "omschrijving": "Pompoen, gepocheerd ei, pastrami, mosterdzaad, Gruyère-hollandaise", "prijs": 15 },
+            { "naam": "Focaccia gerookte zalm", "omschrijving": "Roomkaas, rucola, zoetzure rode ui & zongedroogde tomaat", "prijs": 12 },
+            { "naam": "Vega club sandwich", "omschrijving": "Bietjes, avocado, tomaat, komkommer, roomkaas & chips", "prijs": 12 }
+          ]
+        },
+        {
+          "id": "tostis",
+          "titel": "Tosti’s",
+          "items": [
+            { "naam": "De Wieëtsjaf", "omschrijving": "Roomkaas, kaas, ham, rundergehakt, knoflooksaus, sla & koolsla", "prijzen": [{ "label": "hele", "prijs": 15 }, { "label": "halve", "prijs": 10 }] },
+            { "naam": "Ham & kaas", "prijzen": [{ "label": "hele", "prijs": 9 }, { "label": "halve", "prijs": 6 }] }
+          ]
+        },
+        {
+          "id": "lunch-soepen",
+          "titel": "Soepen",
+          "items": [
+            { "naam": "Soep van de chef", "omschrijving": "Wisselende soepen, vraag er gerust naar bij ons team", "prijs": 8, "veg": "V*" }
+          ]
+        },
+        {
+          "id": "lunch-salades",
+          "titel": "Salades",
+          "ref": "salades"
+        },
+        {
+          "id": "classics",
+          "titel": "De Wieëtsjaf Classics",
+          "intro": "Bij onze classics wordt standaard friet geserveerd. Liever zoete-aardappelwedges? Dat kan, voor 1,00 extra.",
+          "items": [
+            { "naam": "Limburgs zuurvlees", "omschrijving": "Een echte Wieëtsjaf-klassieker: mals stoofvlees naar lokaal recept", "prijs": 22.5, "favoriet": true, "streek": true },
+            { "naam": "Homemade spareribs", "omschrijving": "1 rack met saladegarnituur", "prijs": 26.5 },
+            { "naam": "Gegrilde varkenshaassaté", "omschrijving": "Twee spiezen met gegrilde varkenshaas, geserveerd met satésaus & atjar", "prijs": 25 },
+            { "naam": "De Wieëtsjaf burger", "omschrijving": "100% Heuvelangus, spek, augurk, tomaat, kaas, ui, sla & huisgemaakte saus", "prijs": 23.5 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diner",
+      "titel": "Diner",
+      "tijden": "17.00 – 20.00 uur",
+      "groepen": [
+        {
+          "id": "diner-soepen",
+          "titel": "Soepen",
+          "items": [
+            { "naam": "Soep van de chef", "omschrijving": "Wisselende soepen, vraag er gerust naar bij ons team", "prijs": 8, "veg": "V*" }
+          ]
+        },
+        {
+          "id": "voorgerechten",
+          "titel": "Voorgerechten",
+          "items": [
+            { "naam": "Rundercarpaccio", "omschrijving": "Dungesneden rundercarpaccio met romige truffelmayonaise, pijnboompitten, rucola & Parmezaanse kaas", "prijs": 15.5 },
+            { "naam": "Zalmforel", "omschrijving": "Rode biet op Aziatische wijze, gemarineerde rode ui, duindoornbes, gepofte zoetzure tomaat & little gem", "prijs": 15.5 },
+            { "naam": "Gefermenteerde rode biet", "omschrijving": "Koolrabi misozuke, geitenkaas, gel van vijgen, rode biet & rucola", "prijs": 15.5, "veg": "V" },
+            { "naam": "Gebakken coquille", "omschrijving": "Crème van gekarameliseerde bloemkool, geroosterde hazelnoot, schuim van spek & kappertjes, vinaigrette van ponzu & crumble van spek", "prijs": 17.5 },
+            { "naam": "Cannelloni van ossobuco", "omschrijving": "Crème van paprika & tomaat, basilicumolie & Parmezaanse kaas", "prijs": 17.5 },
+            { "naam": "Knapperige spekwafel", "omschrijving": "Zacht gegaard buikspek, gebrande buikspek, gekonfijte zilveruitjes, appelstroop & paksoi", "prijs": 15.5 },
+            { "naam": "Gekonfijte shortrib", "omschrijving": "Polenta, bieslook, uiencrumble, espuma van sjalot & Old Amsterdam", "prijs": 15.5 },
+            { "naam": "Desembolletje met seizoensboter", "prijs": 3.5 }
+          ]
+        },
+        {
+          "id": "salades",
+          "titel": "Salades",
+          "items": [
+            { "naam": "Salade geitenkaas", "omschrijving": "Walnoten, honing & vijgen", "prijzen": [{ "label": "normaal", "prijs": 17.5 }, { "label": "klein", "prijs": 15.5 }], "veg": "V" },
+            { "naam": "Salade scampi", "omschrijving": "Gebakken shiitake, cherrytomaten, knoflooksaus & quinoa", "prijzen": [{ "label": "normaal", "prijs": 18.5 }, { "label": "klein", "prijs": 16.5 }] },
+            { "naam": "Salade gegrilde groenten", "omschrijving": "Mozzarella & balsamico", "prijzen": [{ "label": "normaal", "prijs": 17.5 }, { "label": "klein", "prijs": 15.5 }], "veg": "V" },
+            { "naam": "Caesar salade", "omschrijving": "Gebakken kip, krokant spek, gekookt eitje, Parmezaanse kaas & romige caesardressing", "prijzen": [{ "label": "normaal", "prijs": 17 }, { "label": "klein", "prijs": 15 }] }
+          ]
+        },
+        {
+          "id": "butter-bread",
+          "titel": "Butter & Bread",
+          "stijl": "uitgelicht",
+          "items": [
+            { "naam": "Butter & Bread", "omschrijving": "Verschillende broodsoorten met drie verschillende smeersels, voor 2 à 3 personen", "prijs": 10.5, "veg": "V" }
+          ]
+        },
+        {
+          "id": "specials",
+          "titel": "Wieëtsjaf specials",
+          "stijl": "uitgelicht",
+          "items": [
+            { "naam": "Gebakken eend", "omschrijving": "Jus van 5 spices, crème van aardpeer, ketchup van zwarte knoflook & kersen, aardappelrösti, pistache-gremolata", "prijs": 28.5 },
+            { "naam": "Gebakken ossenhaas", "omschrijving": "Rode wijnsaus, crème van knolselderij, lavas, pommes pont neuf & ratatouille", "prijs": 38, "tip": "Onze wijntip: Bodegas Briego Crianza, Spanje" }
+          ]
+        },
+        {
+          "id": "vlees",
+          "titel": "Vlees",
+          "items": [
+            { "naam": "Gebakken varkenslende", "omschrijving": "Saus van sjalot & mosterd, aardappelmousseline met lavas, crumble van sjalot, pijnboompitten, spek, wafel van zoete aardappel & koolraap", "prijs": 26.5 },
+            { "naam": "Krokant gebakken rundersukade", "omschrijving": "Zwarte-peperjus, ingelegde paprika, aardappelmousseline met lavas, aardappelkaantjes & gebakken paddenstoelen", "prijs": 32.5 },
+            { "naam": "Risotto met biefstukpuntjes", "omschrijving": "Romige bospaddenstoelenrisotto met biefstukpuntjes", "prijs": 25.5 },
+            { "naam": "Limburgs zuurvlees", "omschrijving": "Zacht gegaard stoofvlees naar lokaal recept, geserveerd met friet & salade", "prijs": 22.5, "favoriet": true, "streek": true },
+            { "naam": "Pasta kip", "omschrijving": "Kruidige roomsaus, tomaat, Parmezaanse kaas & rucola", "prijs": 25.5 },
+            { "naam": "Gegrilde varkenshaassaté", "omschrijving": "Twee spiezen met gegrilde varkenshaas, geserveerd met satésaus, atjar & friet", "prijs": 25 },
+            { "naam": "Homemade spareribs", "omschrijving": "1 rack, geserveerd met frietjes & salade", "prijs": 26.5, "tip": "Onze biersuggestie: Wieëtsjaf Sanctus Mordax (huisbier)" },
+            { "naam": "Wieëtsjaf burger", "omschrijving": "100% Heuvelangus, spek, augurk, tomaat, kaas, ui, sla & huisgemaakte saus", "prijs": 23.5, "tip": "Onze biertip: Wieëtsjaf Sanctus Fusion (huisbier)" }
+          ]
+        },
+        {
+          "id": "vis",
+          "titel": "Vis",
+          "items": [
+            { "naam": "Gestoomde zeewolf", "omschrijving": "Farce van garnalen, chorizo-beurre-blanc, pompoencrème, prei, gel van gezouten citroen, espuma van garnalen, chili-olie", "prijs": 32.5, "tip": "Onze wijntip: Paparuda Chardonnay Reserva, Roemenië" },
+            { "naam": "Gerookte heilbot", "omschrijving": "Beurre blanc van saffraan, crème van aardpeer, gefrituurde bloemkool, fondant van knolselderij", "prijs": 30.5 },
+            { "naam": "Pasta scampi", "omschrijving": "Met kruidige roomsaus, tomaat, Parmezaanse kaas & rucola", "prijs": 25.5 }
+          ]
+        },
+        {
+          "id": "vegetarisch",
+          "titel": "Vegetarisch",
+          "items": [
+            { "naam": "Gnocchi ricotta & spinazie", "omschrijving": "Saus van pompoen & miso, paddenstoelen, gepofte pompoenpitten, pompoenpitolie, Parmezaanse kaas & rucola", "prijs": 22.5, "veg": "V" },
+            { "naam": "Wafel van zoete aardappel", "omschrijving": "Saus van Thaise kerrie, crème van zoete aardappel & aardpeer & gefrituurde bloemkool", "prijs": 22.5, "veg": "V" }
+          ]
+        },
+        {
+          "id": "extras",
+          "titel": "Extra’s",
+          "items": [
+            { "naam": "Portie zoete-aardappelwedges", "omschrijving": "Met mayonaise", "prijs": 6 },
+            { "naam": "Portie friet", "omschrijving": "Met mayonaise", "prijs": 5 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "borrel",
+      "titel": "Borrel",
+      "tijden": null,
+      "groepen": [
+        {
+          "id": "sharing",
+          "titel": "Sharing = Caring",
+          "items": [
+            { "naam": "Gemengde bittergarnituur", "omschrijving": "Verschillende snacks met mayonaise (10 stuks)", "prijs": 9 },
+            { "naam": "Bourgondische bitterballen", "omschrijving": "Met mosterdmayo (10 stuks)", "prijs": 9 },
+            { "naam": "Vegetarische bitterballen", "omschrijving": "Met mosterdmayo (10 stuks)", "prijs": 9, "veg": "V" },
+            { "naam": "Charcuterieplankje", "omschrijving": "Selectie van ambachtelijke charcuterie", "prijs": 14, "favoriet": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kids",
+      "titel": "Kids",
+      "tijden": "11.00 – 20.00 uur",
+      "groepen": [
+        {
+          "id": "kids-items",
+          "titel": "Voor de kids",
+          "items": [
+            { "naam": "Spareribs", "omschrijving": "Van slagerij Jongen (5 ribjes)", "prijs": 14.5 },
+            { "naam": "Saté", "omschrijving": "Van varkenshaas (100 gr) met frietjes", "prijs": 14.5 },
+            { "naam": "Miniburger", "omschrijving": "Met frietjes", "prijs": 7.5 },
+            { "naam": "Frietjes", "omschrijving": "Met frikandel, 5 kipnuggets of 5 bitterballen", "prijs": 7.5 },
+            { "naam": "Poffertjes", "prijs": 5, "veg": "V" },
+            { "naam": "Klein soepje naar keuze", "prijs": 5 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "titel": "Desserts",
+      "tijden": "11.00 – 21.00 uur",
+      "_let_op": "De kaart zegt desserts tot 21:00, de keuken sluit volgens de openingstijden om 20:00. Laten bevestigen.",
+      "groepen": [
+        {
+          "id": "desserts-items",
+          "titel": "Desserts",
+          "items": [
+            { "naam": "Kaasplateau", "omschrijving": "4 kazen, afgestemd op het seizoen, met notenbrood, walnoten, appelstroop & vijgenchutney", "prijs": 10.5 },
+            { "naam": "Crème brûlée", "omschrijving": "Vanille-ijs, kletskop & tonkaboon", "prijs": 9.5, "favoriet": true },
+            { "naam": "De Wieëtsjaf Sweetest", "omschrijving": "Cremeux van mandarijn, espuma van speculaas, roomijs van speculaas, crumble van yoghurt, gel van gekarameliseerde mandarijn, gelei van yoghurt & mandarijn, tuile, olie van mandarijn", "prijs": 9.5 },
+            { "naam": "Café Poire", "omschrijving": "Mousse van koffie & pecannotenpraline, cremeux van peer, opgeslagen ganache van miso & karamel, compote van peer, gel van peer & rum, koffiecrumble, tuile & confit van peer & krokant van koffie", "prijs": 9.5 },
+            { "naam": "Coupe de Wieëtsjaf", "omschrijving": "Diverse soorten ijs met sabayon & crumble", "prijs": 7.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "groepsinfo": "Voor groepen vanaf 10 personen serveren we shared plates; laat je hierover informeren door onze medewerkers. Iedere tafel ontvangt één rekening.",
+  "allergenen": {
+    "_uitleg": "De papieren kaart toont per gerecht allergeen-iconen. Die zijn NIET automatisch overgenomen: de iconen zijn te klein om betrouwbaar uit te lezen en een fout is een gezondheidsrisico. Laat de keuken docs/allergenen-controlelijst.csv invullen en zet daarna per gerecht 'allergenen': [...] en hieronder 'geverifieerd': true. Tot die tijd toont de site alleen de algemene melding.",
+    "geverifieerd": false,
+    "lijst": ["gluten", "schaaldieren", "ei", "vis", "pinda", "soja", "lactose", "noten", "selderij", "mosterd", "sesam", "sulfiet", "zwaveldioxide", "lupine", "weekdieren"],
+    "melding": "Wij bereiden al onze gerechten in dezelfde ruimte en kunnen sporen van allergenen niet 100% uitsluiten. Heb je een allergie of specifieke vraag over een gerecht? Meld het bij een van onze collega’s, dan vertellen we je precies wat erin zit."
+  }
+}

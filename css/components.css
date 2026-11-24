@@ -1,0 +1,236 @@
+/* Componenten. Elk component is afgeleid van een element uit het drukwerk of de social posts. */
+
+/* ---------------------------------------------------------------- Knoppen
+   Bijna haaks, zoals de sectielabels op de kaart. Geen pijltjes, geen pillen. */
+.knop {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s-2);
+  min-height: 48px; padding: 0.7rem 1.35rem;
+  font-family: var(--f-tekst); font-weight: 700; font-size: 1rem; line-height: 1.2;
+  text-decoration: none; text-align: center;
+  border: 2px solid var(--c-bosgroen); border-radius: var(--r-label);
+  background: var(--c-bosgroen); color: var(--c-creme);
+  transition: background-color var(--duur), color var(--duur), border-color var(--duur);
+}
+.knop:hover { background: var(--c-bosgroen-2); border-color: var(--c-bosgroen-2); }
+.knop--rand { background: transparent; color: var(--c-bosgroen); }
+.knop--rand:hover { background: var(--c-bosgroen); color: var(--c-creme); }
+.donker .knop, .knop--goud { background: var(--c-goud); border-color: var(--c-goud); color: var(--c-bosgroen); }
+.donker .knop:hover, .knop--goud:hover { background: var(--c-creme); border-color: var(--c-creme); }
+.donker .knop--rand { background: transparent; border-color: var(--c-creme); color: var(--c-creme); }
+.donker .knop--rand:hover { background: var(--c-creme); color: var(--c-bosgroen); }
+.knop .icoon { width: 1.15rem; height: 1.15rem; }
+.knop[aria-busy="true"] { cursor: progress; opacity: 0.85; }
+.knoppen { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+.tekstlink { font-weight: 700; color: var(--c-bosgroen); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.25em; text-decoration-color: var(--c-goud); }
+.donker .tekstlink { color: var(--c-creme); }
+
+/* ------------------------------------------------- Labelblokken (kaart) */
+.label {
+  display: inline-block; padding: 0.3rem 0.8rem 0.25rem;
+  background: var(--c-olijf); color: var(--c-papier);
+  font-family: var(--f-tekst); font-weight: 700; font-size: 1.125rem; line-height: 1.25;
+  border-radius: var(--r-label);
+}
+.donker .label { background: var(--c-creme); color: var(--c-bosgroen); }
+
+/* Kop in blokken, zoals 'WELKOM BIJ / DE WIEËTSJAF' op de voorkant van de kaart */
+.blokkop { display: flex; flex-direction: column; align-items: flex-start; gap: 0.18em; font-size: var(--fs-h1); }
+.blokkop span {
+  display: block; background: var(--c-olijf); color: var(--c-papier);
+  padding: 0.12em 0.22em 0.02em; line-height: 0.92;
+}
+
+/* Gouden streep onder het accentwoord (social posts) */
+.streep { display: inline-block; padding-bottom: 0.08em; border-bottom: var(--lijn-dik) solid var(--c-goud); }
+.donker .accent { color: var(--c-goud); }
+
+/* Brede kapitalen-regel (ondertitel social posts). Spaarzaam gebruiken. */
+.ondertitel { font-weight: 700; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.14em; }
+
+/* ‘Lunch ◉ Diner ◉ Borrel ◉ Feestzaal’ */
+.reeks { display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem 0.7rem; font-size: var(--fs-lead); list-style: none; padding: 0; }
+.reeks li { display: inline-flex; align-items: center; gap: 0.7rem; }
+.reeks li + li::before {
+  content: ""; width: 0.6em; height: 0.6em; border-radius: 50%;
+  background: radial-gradient(circle, currentColor 0 30%, transparent 32% 52%, currentColor 54% 100%);
+  opacity: 0.7;
+}
+
+.lead { font-size: var(--fs-lead); line-height: 1.55; font-weight: 300; }
+.donker .lead { font-weight: 400; }
+.klein { font-size: var(--fs-sm); }
+
+/* ---------------------------------------------------- Rond logo op de naad */
+.naadlogo { width: clamp(5.5rem, 4rem + 4vw, 7.5rem); aspect-ratio: 1; position: relative; z-index: 2; }
+.naadlogo img { width: 100%; height: 100%; }
+
+/* --------------------------------------------------------------- Foto’s */
+.foto { position: relative; overflow: hidden; background: var(--c-paneel); }
+.foto img { width: 100%; height: 100%; object-fit: cover; }
+.foto--43 { aspect-ratio: 4 / 3; }
+.foto--32 { aspect-ratio: 3 / 2; }
+.foto--45 { aspect-ratio: 4 / 5; }
+.foto--23 { aspect-ratio: 2 / 3; }
+/* Gescheurde rand (menukaart, pagina ‘Wijnen & Bieren’) */
+.foto--scheur {
+  -webkit-mask: url("/assets/brand/scheur-boven.svg") top / 100% 22px no-repeat, linear-gradient(#000 0 0) center / 100% calc(100% - 42px) no-repeat, url("/assets/brand/scheur-onder.svg") bottom / 100% 22px no-repeat;
+  mask: url("/assets/brand/scheur-boven.svg") top / 100% 22px no-repeat, linear-gradient(#000 0 0) center / 100% calc(100% - 42px) no-repeat, url("/assets/brand/scheur-onder.svg") bottom / 100% 22px no-repeat;
+}
+.bijschrift { font-size: var(--fs-xs); margin-top: var(--s-2); color: var(--c-olijf); }
+
+/* ----------------------------------------- Uitgelicht paneel (Lunchplankje) */
+.paneel {
+  position: relative; background: var(--c-paneel); border-radius: var(--r-paneel);
+  padding: var(--s-7) clamp(1.25rem, 3vw, 2.5rem) var(--s-6);
+  margin-top: 1.4rem;
+}
+.paneel__titel {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -55%);
+  white-space: nowrap; font-size: var(--fs-h3); color: var(--c-olijf);
+  background: var(--c-papier); padding: 0 0.5em; border-radius: var(--r-label);
+}
+.paneel__titel--links { left: clamp(1.25rem, 3vw, 2.5rem); transform: translate(0, -55%); }
+
+/* --------------------------------------------- Okerkader (allergenen, extra’s) */
+.kader { border: 2px solid var(--c-goud); border-radius: var(--r-kader); padding: var(--s-5) clamp(1.25rem, 3vw, 2rem); }
+.kader__kop { font-family: var(--f-tekst); font-weight: 700; font-size: var(--fs-h4); color: var(--c-oker-tekst); margin-bottom: var(--s-2); }
+.donker .kader__kop { color: var(--c-goud); }
+
+/* ---------------------------------------------------------- Status-regel */
+.js .status[hidden] { display: inline-flex !important; visibility: hidden; }
+.status { display: inline-flex; align-items: center; gap: var(--s-2); font-weight: 600; font-size: var(--fs-sm); }
+.status::before { content: ""; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--c-salie); flex: none; }
+.status[data-open="true"]::before { background: #3f9c5a; box-shadow: 0 0 0 3px rgb(63 156 90 / 0.25); }
+.status[data-open="false"]::before { background: #a8564a; }
+
+/* ------------------------------------------------------- Openingstijden */
+.tijden { width: 100%; border-collapse: collapse; font-size: var(--fs-body); }
+.tijden caption { text-align: left; font-weight: 700; margin-bottom: var(--s-2); }
+.tijden th, .tijden td { text-align: left; padding: 0.45rem 0; border-bottom: 1px solid var(--c-lijn); font-weight: 400; }
+.tijden th { font-weight: 600; padding-right: var(--s-4); }
+.tijden td { text-align: right; font-variant-numeric: tabular-nums; }
+.tijden tr[data-vandaag="true"] th, .tijden tr[data-vandaag="true"] td { font-weight: 700; color: var(--c-bosgroen); }
+.tijden tr[data-vandaag="true"] th::after { content: " · vandaag"; font-weight: 400; font-size: var(--fs-xs); }
+.donker .tijden th, .donker .tijden td { border-color: rgb(245 230 197 / 0.2); }
+.donker .tijden tr[data-vandaag="true"] th, .donker .tijden tr[data-vandaag="true"] td { color: var(--c-goud); }
+
+/* -------------------------------------------------------- Gerechtregels */
+.gerechten { list-style: none; padding: 0; display: grid; gap: var(--s-4); }
+.gerecht { display: grid; grid-template-columns: 1fr auto; gap: 0 var(--s-4); align-items: baseline; }
+.gerecht__naam { font-weight: 700; color: var(--c-olijf); font-size: 1.0625rem; display: inline-flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+.gerecht__oms { grid-column: 1 / -1; margin-top: 0.1rem; }
+.gerecht__prijs { font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+.gerecht__prijs small { color: var(--c-olijf); }
+.gerecht__allergenen { grid-column: 1 / -1; font-size: var(--fs-xs); color: var(--c-oker-tekst); font-weight: 600; margin-top: 0.1rem; }
+.gerecht__tip { grid-column: 1 / -1; font-style: italic; font-size: var(--fs-sm); margin-top: 0.15rem; }
+.gerecht__merk { display: inline-flex; gap: 0.25rem; align-items: center; }
+.merk-hart, .merk-pin { width: 1rem; height: 1rem; color: #95602f; } /* koper van de kaart, verdonkerd tot ≥ 3:1 */
+.veg {
+  display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 0.3rem;
+  border: 1.5px solid currentColor; border-radius: 999px; font-size: 0.72rem; font-weight: 700; line-height: 1;
+  color: var(--c-olijf); text-decoration: none; transform: translateY(-0.1em);
+}
+.donker .gerecht__naam { color: var(--c-creme); }
+
+/* ----------------------------------------------------------- Agenda-rij */
+.agenda { list-style: none; padding: 0; border-top: 1px solid var(--c-lijn); }
+.agenda__item { display: grid; grid-template-columns: 5.25rem 1fr; gap: var(--s-2) var(--s-5); padding-block: var(--s-5); border-bottom: 1px solid var(--c-lijn); }
+@media (min-width: 48rem) { .agenda__item { grid-template-columns: 6.5rem 1fr auto; align-items: center; } }
+.datumblok { font-family: var(--f-display); line-height: 0.85; color: var(--c-olijf); text-align: center; }
+.datumblok__dag { display: block; font-size: 3.25rem; }
+.datumblok__dag--bereik { font-size: 2.1rem; white-space: nowrap; }
+.datumblok__maand { display: block; font-size: 1.25rem; letter-spacing: 0.04em; }
+.datumblok__wd { display: block; font-family: var(--f-tekst); font-size: var(--fs-xs); font-weight: 600; margin-top: 0.35rem; }
+.agenda__tekst h3 { font-size: var(--fs-h3); }
+.agenda__tekst h3 a { text-decoration: none; }
+.agenda__tekst h3 a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.agenda__tekst p { margin-top: var(--s-2); }
+.agenda__meta { font-size: var(--fs-sm); font-weight: 600; color: var(--c-olijf); }
+.agenda__actie { grid-column: 2; }
+@media (min-width: 48rem) { .agenda__actie { grid-column: 3; } }
+
+/* --------------------------------------------------------- Feitenlijst */
+.feiten { display: grid; gap: 0; border-top: 1px solid currentColor; }
+.feiten div { display: grid; grid-template-columns: minmax(8rem, 1fr) 2fr; gap: var(--s-4); padding-block: var(--s-3); border-bottom: 1px solid rgb(127 127 127 / 0.35); }
+.feiten dt { font-weight: 700; }
+@media (max-width: 30rem) { .feiten div { grid-template-columns: 1fr; gap: 0; } }
+
+/* --------------------------------------------------------- Taplenzen */
+.lenzen { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-5); list-style: none; padding: 0; }
+.lens { text-align: center; }
+.lens picture { width: min(100%, 13rem); margin-inline: auto; aspect-ratio: 1; border-radius: 50%; overflow: hidden; }
+.lens h3, .lens h4 { margin-top: var(--s-4); font-family: var(--f-display); font-weight: 400; font-size: var(--fs-h3); line-height: 1; }
+.lens p { font-size: var(--fs-sm); margin-top: var(--s-1); }
+
+/* ------------------------------------------------------------ Melding */
+.melding { border-left: 4px solid var(--c-goud); background: var(--c-paneel); padding: var(--s-4) var(--s-5); border-radius: 0 var(--r-kader) var(--r-kader) 0; }
+.donker .melding { background: var(--c-bosgroen-2); }
+.melding--testdata { border-color: var(--c-testdata); background: #fbe9e7; color: #5c1610; font-weight: 600; }
+.melding--fout { border-color: var(--c-fout); }
+
+/* ------------------------------------------------------ Formuliervelden */
+.veld { display: grid; gap: var(--s-1); }
+.veld label { font-weight: 700; font-size: var(--fs-sm); }
+.invoer {
+  min-height: 48px; width: 100%; padding: 0.65rem 0.9rem;
+  background: #fffdf8; border: 1.5px solid var(--c-olijf); border-radius: var(--r-label);
+}
+.invoer:focus-visible { outline-offset: 1px; }
+.zoekveld { position: relative; }
+.zoekveld .icoon { position: absolute; left: 0.85rem; top: 50%; width: 1.15rem; height: 1.15rem; transform: translateY(-50%); color: var(--c-olijf); pointer-events: none; }
+.zoekveld .invoer { padding-left: 2.6rem; }
+.filters { display: flex; flex-wrap: wrap; gap: var(--s-2); border: 0; padding: 0; }
+.filters legend { font-weight: 700; font-size: var(--fs-sm); margin-bottom: var(--s-2); padding: 0; }
+.filter { position: relative; }
+.filter input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.filter span {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0.4rem 0.85rem;
+  border: 1.5px solid var(--c-olijf); border-radius: var(--r-label); font-weight: 600; font-size: var(--fs-sm); background: transparent;
+}
+.filter input:checked + span { background: var(--c-olijf); color: var(--c-papier); }
+.filter input:focus-visible + span { outline: 3px solid var(--c-focus-licht); outline-offset: 2px; }
+
+/* ----------------------------------------------- Inhoudsopgave (sprongen) */
+.springlijst { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); list-style: none; padding: 0; }
+.springlijst a { font-weight: 700; text-decoration-color: var(--c-goud); text-decoration-thickness: 2px; }
+
+/* -------------------------------------------------------- Proza-pagina’s */
+.proza { max-width: var(--max-tekst); }
+.proza h2 { font-size: var(--fs-h3); margin-top: var(--s-7); margin-bottom: var(--s-3); }
+.proza h3 { font-family: var(--f-tekst); font-size: var(--fs-h4); font-weight: 700; margin-top: var(--s-5); margin-bottom: var(--s-2); line-height: 1.3; }
+.proza ul, .proza ol { padding-left: 1.25rem; margin-top: var(--s-3); }
+.proza li + li { margin-top: var(--s-1); }
+.proza p + ul, .proza ul + p { margin-top: var(--s-3); }
+.proza table { border-collapse: collapse; width: 100%; margin-top: var(--s-4); font-size: var(--fs-sm); }
+.proza th, .proza td { text-align: left; vertical-align: top; padding: var(--s-2); border-bottom: 1px solid var(--c-lijn); }
+@media (max-width: 40rem) {
+  .proza table, .proza tbody, .proza tr, .proza td { display: block; width: 100%; }
+  .proza thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .proza tr { padding-block: var(--s-3); border-bottom: 1px solid var(--c-lijn); }
+  .proza td { border: 0; padding: 0.1rem 0; }
+  .proza td::before { content: attr(data-kop) ": "; font-weight: 700; }
+}
+.concept {
+  border: 2px dashed var(--c-fout); padding: var(--s-4) var(--s-5); border-radius: var(--r-kader); background: #fff7f2;
+  font-weight: 600; color: #5c1610;
+}
+
+/* ---------------------------------------------- Toestemming (staat standaard uit) */
+.toestemming { max-width: 34rem; width: calc(100% - 2rem); border: 0; padding: var(--s-6); border-radius: var(--r-kader); }
+.toestemming::backdrop { background: rgb(17 39 27 / 0.6); }
+.toestemming__form { display: grid; gap: var(--s-4); }
+.toestemming__keuze { display: flex; gap: var(--s-3); align-items: flex-start; margin-top: var(--s-3); }
+.toestemming__keuze input { width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; flex: none; }
+.toestemming .knop { flex: 1 1 auto; }
+.toestemming .knop:not(.knop--rand) { background: var(--c-goud); border-color: var(--c-goud); color: var(--c-bosgroen); }
+.linkknop { background: none; border: 0; padding: 0.2rem 0; color: inherit; text-decoration: underline; font-size: inherit; }
+
+/* Lenzen als lijst op smalle schermen (na de basisregels, zodat ze voorrang krijgen) */
+@media (max-width: 34rem) {
+  .lenzen { grid-template-columns: 1fr; gap: var(--s-4); }
+  .lens { display: grid; grid-template-columns: 6.5rem 1fr; gap: var(--s-4); align-items: center; text-align: left; }
+  .lens picture { width: 6.5rem; margin: 0; grid-row: span 2; }
+  .lens h3, .lens h4 { margin-top: 0; align-self: end; }
+  .lens h3 br, .lens h4 br { display: none; }
+  .lens p { margin-top: 0; align-self: start; }
+}

@@ -1,0 +1,32 @@
+{
+  "_LET_OP": "TESTDATA – alleen voor lokale ontwikkeling (npm run dev:testdata). Wordt NOOIT gepubliceerd: de bouwstap weigert dit bestand in productie. Sanctus-gegevens komen uit de eigen ontwerpbestanden; alle 'Testbier'-regels en alle prijzen zijn fictief.",
+  "status": "ok",
+  "bron": "testdata",
+  "testdata": true,
+  "opgehaald": "2026-11-24T18:00:00.000Z",
+  "menu": { "naam": "TESTMENU", "bijgewerkt": "2026-11-24T17:45:00.000Z" },
+  "secties": [
+    {
+      "id": "t1",
+      "naam": "Van de tap",
+      "items": [
+        { "id": "s1", "type": "beer", "naam": "Sanctus Fusion", "brouwerij": "Brouwerij Rolduc", "plaats": "Kerkrade", "land": "Nederland", "stijl": "IPA", "abv": 7.5, "ibu": null, "beschrijving": "Citrus, hop en tropisch fruit.", "tap": "1", "label": null, "containers": [{ "naam": "TEST 25 cl", "prijs": null, "valuta": "EUR" }], "nitro": false, "cask": false, "nieuw": false, "toegevoegd": null },
+        { "id": "s2", "type": "beer", "naam": "Sanctus Mordax", "brouwerij": "Brouwerij Rolduc", "plaats": "Kerkrade", "land": "Nederland", "stijl": "Belgian Blond", "abv": 6.5, "ibu": null, "beschrijving": "Vlierbloesem en szechuanpeper: licht, fris en tintelend.", "tap": "2", "label": null, "containers": [{ "naam": "TEST 25 cl", "prijs": null, "valuta": "EUR" }], "nitro": false, "cask": false, "nieuw": false, "toegevoegd": null },
+        { "id": "s3", "type": "beer", "naam": "Sanctus Equinox", "brouwerij": "Brouwerij Rolduc", "plaats": "Kerkrade", "land": "Nederland", "stijl": "Brown IPA", "abv": 8, "ibu": null, "beschrijving": "Donker, zacht en hoppig.", "tap": "3", "label": null, "containers": [{ "naam": "TEST 25 cl", "prijs": null, "valuta": "EUR" }], "nitro": false, "cask": false, "nieuw": true, "toegevoegd": "2026-11-20T10:00:00.000Z" },
+        { "id": "t4", "type": "beer", "naam": "Testbier Wisseltap Stout", "brouwerij": "Voorbeeldbrouwerij", "plaats": "Testdorp", "land": "", "stijl": "Stout - Imperial", "abv": 10.2, "ibu": 60, "beschrijving": "Fictief bier om de opmaak te testen.", "tap": "4", "label": null, "containers": [{ "naam": "TEST 20 cl", "prijs": 9.99, "valuta": "EUR" }], "nitro": true, "cask": false, "nieuw": true, "toegevoegd": "2026-11-22T10:00:00.000Z" }
+      ]
+    },
+    {
+      "id": "t2",
+      "naam": "Fles & blik",
+      "items": [
+        { "id": "t5", "type": "beer", "naam": "Testbier Tripel", "brouwerij": "Voorbeeldbrouwerij", "plaats": "Testdorp", "land": "", "stijl": "Tripel", "abv": 8.5, "ibu": 30, "beschrijving": "Fictief bier om de opmaak te testen.", "tap": "", "label": null, "containers": [{ "naam": "TEST 33 cl fles", "prijs": 9.99, "valuta": "EUR" }], "nitro": false, "cask": false, "nieuw": false, "toegevoegd": null },
+        { "id": "t6", "type": "beer", "naam": "Testbier Witbier", "brouwerij": "Voorbeeldbrouwerij", "plaats": "Testdorp", "land": "", "stijl": "Witbier", "abv": 5, "ibu": 15, "beschrijving": "Fictief bier om de opmaak te testen. Met een <script>alert('xss')</script> in de omschrijving om opschonen te testen.", "tap": "", "label": null, "containers": [{ "naam": "TEST 33 cl blik", "prijs": 9.99, "valuta": "EUR" }], "nitro": false, "cask": false, "nieuw": false, "toegevoegd": null },
+        { "id": "t7", "type": "beer", "naam": "Testbier Zuur Framboos", "brouwerij": "Voorbeeldbrouwerij", "plaats": "Testdorp", "land": "", "stijl": "Sour - Fruited", "abv": 4.5, "ibu": null, "beschrijving": "Fictief bier om de opmaak te testen.", "tap": "", "label": null, "containers": [{ "naam": "TEST 37,5 cl fles", "prijs": 9.99, "valuta": "EUR" }], "nitro": false, "cask": false, "nieuw": false, "toegevoegd": null },
+        { "id": "t8", "type": "non_alcoholic", "naam": "Testbier 0.0 IPA", "brouwerij": "Voorbeeldbrouwerij", "plaats": "Testdorp", "land": "", "stijl": "Non-Alcoholic Beer - IPA", "abv": 0, "ibu": null, "beschrijving": "Fictief alcoholvrij bier om de opmaak te testen.", "tap": "", "label": null, "containers": [{ "naam": "TEST 33 cl blik", "prijs": 9.99, "valuta": "EUR" }], "nitro": false, "cask": false, "nieuw": false, "toegevoegd": null }
+      ]
+    }
+  ],
+  "binnenkort": null,
+  "aantal": 8
+}

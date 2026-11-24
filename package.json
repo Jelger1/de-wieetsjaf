@@ -1,0 +1,25 @@
+{
+  "name": "wieetsjaf-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Dé Wieëtsjaf, Kerkrade. Statische site met vanilla HTML/CSS/JS, gebouwd uit centrale data.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:productie": "node scripts/build.mjs --productie",
+    "dev": "node scripts/dev-server.mjs --watch",
+    "dev:testdata": "node scripts/dev-server.mjs --watch --testdata",
+    "images": "python scripts/afbeeldingen.py",
+    "untappd:sync": "node scripts/untappd-sync.mjs",
+    "test": "node scripts/build.mjs && playwright test",
+    "test:unit": "node --test tests/unit/untappd.test.mjs tests/unit/tijden.test.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.1",
+    "@playwright/test": "^1.65.1",
+    "playwright": "1.65.1"
+  }
+}

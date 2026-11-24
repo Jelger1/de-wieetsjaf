@@ -1,0 +1,13 @@
+{
+  "_uitleg": "Overzicht voor de cookiepagina. Gebaseerd op een meting met een schone browser (Playwright/Chromium); opnieuw meten na elke nieuwe koppeling: node tests/meet-cookies.mjs",
+  "gecontroleerd": "november 2026",
+  "methode": "Gemeten op 24 november 2026 met een schone browser (Chromium): welke cookies en lokale opslag er zijn na het bezoeken van de site, na het openen van het reserveringsvenster (zonder iets in te vullen) en na het laden van de Untappd-kaart.",
+  "items": [
+    { "wanneer": "Altijd", "partij": "Dé Wieëtsjaf (deze website)", "wat": "Geen cookies, geen lokale opslag", "waarom": "Niet nodig" },
+    { "wanneer": "Altijd", "partij": "Hostingpartij", "wat": "Serverlogboek met IP-adres (geen cookie)", "waarom": "Beveiliging en storingen oplossen" },
+    { "wanneer": "Als je op Reserveren klikt", "partij": "Guestplan (reserveringssysteem)", "wat": "Het reserveringsvenster van Guestplan; geen cookies van Guestplan zelf gemeten", "waarom": "Nodig om je reservering te kunnen maken" },
+    { "wanneer": "Als je op Reserveren klikt", "partij": "Stripe (geladen door Guestplan)", "wat": "Cookies __stripe_mid (1 jaar) en __stripe_sid (30 minuten) op wieetsjaf.nl en m (13 maanden) op m.stripe.com", "waarom": "Fraudepreventie bij online betalingen, bijvoorbeeld een aanbetaling" },
+    { "wanneer": "Als je de Untappd-bierkaart laadt", "partij": "Untappd (met Segment)", "wat": "Kaart en labels van Untappd; via Segment telt Untappd een weergave (met het adres van de pagina). Geen cookies gemeten", "waarom": "De officiële bierkaart tonen" },
+    { "wanneer": "Als je het saldo van je cadeaukaart checkt", "partij": "Loyalty in a Box", "wat": "Externe saldopagina", "waarom": "Saldo opvragen" }
+  ]
+}

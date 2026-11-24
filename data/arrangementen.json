@@ -1,0 +1,280 @@
+{
+  "_uitleg": "Seizoensconcepten en arrangementen. Elk arrangement krijgt een eigen pagina op /arrangementen/<id>/. Zet 'actief' op false of laat 'tot' verlopen om het van de site te halen; de pagina blijft dan als archief bestaan zolang 'archiveren' true is (anders wordt hij niet meer gebouwd). 'uitgelicht' bepaalt of het op de homepage staat (maximaal 1 tegelijk wordt groot getoond).",
+  "items": [
+    {
+      "id": "alpine-gondel-dining",
+      "titel": "Alpine Gondel Dining",
+      "ondertitel": "Nieuw in hartje Kerkrade",
+      "actief": true,
+      "uitgelicht": true,
+      "vanaf": "2026-11-01",
+      "tot": "2027-01-21",
+      "kort": "Je eigen privégondel op ons terras, voor 4 tot 6 personen. Met het Wieëtsjaf Alpine Shared Menu: 2 gangen voor € 49,50 p.p.",
+      "prijs": "€ 49,50 p.p. (2 gangen)",
+      "feiten": [
+        [
+          "Wanneer",
+          "Dagelijks van 23 november 2026 tot en met 21 januari 2027"
+        ],
+        [
+          "Tijden",
+          "Middag (aanvang tussen 12.00 en 13.00 uur) of avond (aanvang tussen 17.00 en 18.00 uur), ongeveer 3 uur"
+        ],
+        [
+          "Gezelschap",
+          "4 tot 6 personen per privégondel"
+        ],
+        [
+          "Menu",
+          "Alleen het Wieëtsjaf Alpine Shared Menu. Geen à la carte of kindermenu"
+        ],
+        [
+          "Prijs",
+          "2 gangen voor € 49,50 per persoon"
+        ],
+        [
+          "Aanbetaling",
+          "Bij online reserveren betaal je € 100 aanbetaling"
+        ],
+        [
+          "Dranken & extra’s",
+          "Worden apart berekend"
+        ],
+        [
+          "Allergieën",
+          "Geef ze vooraf door bij je reservering"
+        ]
+      ],
+      "gangen": [
+        {
+          "label": "1e gang",
+          "titel": "Alpine Brettljause",
+          "tekst": "Een rijkgevulde Alpenplank met kazen, fijne vleeswaren, brood en verrassende lekkernijen. Midden op tafel, voor iedereen om van te pakken."
+        },
+        {
+          "label": "2e gang",
+          "titel": "Alpine Shared Dining",
+          "tekst": "Een selectie warme, winterse gerechten om samen te delen, in de vertrouwde shared-diningstijl van Dé Wieëtsjaf."
+        }
+      ],
+      "extras": [
+        "Welkomstbubbel",
+        "Wijnarrangement",
+        "Sanctus-bierarrangement",
+        "Shared dessert"
+      ],
+      "verhaal": [
+        "Je hoeft deze winter niet naar Oostenrijk om in een gondel te zitten. Op ons terras staan sfeervol ingerichte gondels, met ski’s ertegenaan, lichtjes in de kerstbomen en een tafel vol eten om samen te delen.",
+        "In Oostenrijk is een Brettljause een houten plank (‘Brettl’) vol hartige lekkernijen voor tussendoor (‘Jause’): dé klassieker in de berghut. Bij ons is het de eerste gang van het Alpine Shared Menu."
+      ],
+      "reserveren": {
+        "via": "guestplan",
+        "guestplanService": "LzwJrAP",
+        "diensten": [
+          {
+            "label": "Reserveer voor de avond",
+            "service": "LzwJrAP"
+          },
+          {
+            "label": "Reserveer voor de middag",
+            "service": "8BFcwYf"
+          }
+        ],
+        "_bron": "Guestplan-services 'Alpine Gondel Dining evening/afternoon' (publieke widget-API, 24-11-2026)"
+      },
+      "afbeeldingen": [
+        "gondel-06",
+        "gondel-03",
+        "gondel-09",
+        "gondel-04",
+        "gondel-11",
+        "gondel-07"
+      ],
+      "bron": "Instagram-campagne Alpine Gondel Dining (V3, nov. 2026) en fotografie Gondola",
+      "archiveren": true,
+      "periode": "23 november 2026 t/m 21 januari 2027"
+    },
+    {
+      "id": "kerstmenu-2026",
+      "titel": "Kerstmenu 2026",
+      "ondertitel": "1e & 2e Kerstdag",
+      "actief": true,
+      "uitgelicht": false,
+      "vanaf": "2026-09-22",
+      "tot": "2026-12-26",
+      "kort": "Zes gangen voor € 89,50 p.p., of het vegetarische kerstmenu voor € 79,50 p.p. Inclusief amuses, koffie en friandises. Reserveren is verplicht.",
+      "prijs": "€ 89,50 p.p. · vegetarisch € 79,50 p.p.",
+      "menus": [
+        {
+          "titel": "Kerstmenu",
+          "prijs": 89.5,
+          "noot": "Zes gangen, inclusief amuses, koffie en friandises",
+          "gangen": [
+            [
+              "Amuse",
+              "Zeebaars met miso",
+              "Wortel en luchtige aardappel"
+            ],
+            [
+              "Tweede amuse",
+              "Bloemkool",
+              "Zoete aardappel en krokante Parmezaan"
+            ],
+            [
+              "Voorgerecht",
+              "Millefeuille met steaktartaar",
+              "Truffel en luchtige sjalottencompote"
+            ],
+            [
+              "Eerste tussengerecht",
+              "Krab met aardpeer",
+              "Komkommer, ponzu en gerookte amandel"
+            ],
+            [
+              "Tweede tussengerecht",
+              "Zachtgegaarde sukade en kreeft",
+              "Vadouvan, wortel en pompoen"
+            ],
+            [
+              "Hoofdgerecht",
+              "Hertenrugfilet",
+              "Spruitjes, duxelles, kwartelei en portsaus"
+            ],
+            [
+              "Kaas",
+              "Saffraan-cheesecake",
+              "Luchtige misoganache en tomatensorbet"
+            ],
+            [
+              "Dessert",
+              "Wieëtsjafs Winterwonder",
+              ""
+            ]
+          ]
+        },
+        {
+          "titel": "Vegetarisch kerstmenu",
+          "prijs": 79.5,
+          "noot": "Vegetarisch",
+          "gangen": [
+            [
+              "Amuse",
+              "Knolselderij met miso",
+              "Aardappel en wortel"
+            ],
+            [
+              "Tweede amuse",
+              "Bloemkool",
+              "Zoete aardappel en krokante Parmezaan"
+            ],
+            [
+              "Voorgerecht",
+              "Millefeuille met tomatentartaar",
+              "Truffel"
+            ],
+            [
+              "Eerste tussengerecht",
+              "Aardpeer en koningsoesterzwam",
+              "Komkommer en ponzu"
+            ],
+            [
+              "Tweede tussengerecht",
+              "Cannelloni met geitenkaas",
+              "Rode biet en vijg"
+            ],
+            [
+              "Hoofdgerecht",
+              "Bloemkoolsteak",
+              "Spruitjes, duxelles en hazelnoot"
+            ],
+            [
+              "Kaas",
+              "Saffraan-cheesecake",
+              "Miso en tomaat"
+            ],
+            [
+              "Dessert",
+              "Wieëtsjafs Winterwonder",
+              ""
+            ]
+          ]
+        }
+      ],
+      "reserveren": {
+        "via": "guestplan",
+        "guestplanService": "4MgTmJ4",
+        "verplicht": true
+      },
+      "afbeeldingen": [],
+      "bron": "wieetsjaf.nl/kerstmenu-2026 (menukaartafbeeldingen, sept. 2026)",
+      "archiveren": false,
+      "feiten": [
+        [
+          "Wanneer",
+          "1e en 2e Kerstdag (vrijdag 25 en zaterdag 26 december 2026)"
+        ],
+        [
+          "Aanvang",
+          "Tussen 18.00 en 19.00 uur"
+        ],
+        [
+          "Aanbetaling",
+          "€ 25 per persoon bij online reserveren"
+        ],
+        [
+          "Reserveren",
+          "Verplicht"
+        ]
+      ]
+    },
+    {
+      "id": "chefsmenu",
+      "titel": "Chefsmenu november",
+      "ondertitel": "Herfst en wild in de hoofdrol",
+      "actief": true,
+      "uitgelicht": false,
+      "vanaf": "2026-11-01",
+      "tot": "2026-11-30",
+      "kort": "Elke maand een nieuw chefsmenu. In november: herfst- en wildproducten in de hoofdrol.",
+      "prijs": null,
+      "_let_op": "Prijs van het chefsmenu staat niet op de huidige site. Aanvullen.",
+      "menus": [
+        {
+          "titel": "Chefsmenu november 2026",
+          "prijs": null,
+          "noot": "Laat je verrassen door de smaken van het seizoen.",
+          "gangen": [
+            [
+              "",
+              "Pastrami van hert",
+              "Pompoen, dadel, kweepeer, knolselderij"
+            ],
+            [
+              "",
+              "Duif",
+              "Pastinaak, portobello, aardpeer"
+            ],
+            [
+              "",
+              "Wild zwijn",
+              "Paddenstoelenrisotto, pecorino"
+            ],
+            [
+              "",
+              "Cranberry",
+              "Hangop, chocolade, gember"
+            ]
+          ]
+        }
+      ],
+      "reserveren": {
+        "via": "guestplan"
+      },
+      "afbeeldingen": [
+        "chefsmenu"
+      ],
+      "bron": "wieetsjaf.nl/chefsmenu-november-2026 (13 nov. 2026)",
+      "archiveren": false
+    }
+  ]
+}
