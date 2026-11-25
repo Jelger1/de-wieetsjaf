@@ -141,6 +141,24 @@ ${productie ? '' : '  X-Robots-Tag: noindex, nofollow\n'}
   X-Robots-Tag: noindex
 `);
 
+// ------------------------------------------------- Submap (GitHub Pages)
+// Staat de site niet in de hoofdmap van een domein, maar in een submap (SITE_URL met een pad, zoals
+// https://jelger1.github.io/de-wieetsjaf), dan krijgen alle root-relatieve paden die submap als voorvoegsel.
+const basisPad = new URL(basisUrl).pathname.replace(/\/$/, '');
+if (basisPad) {
+  const pre = (u) => (u.startsWith('/') && !u.startsWith('//') && !u.startsWith(`${basisPad}/`) ? basisPad + u : u);
+  const herschrijf = (s) => s
+    .replace(/\b(href|src|action|poster)="(\/[^"]*)"/g, (_, a, u) => `${a}="${pre(u)}"`)
+    .replace(/\b(srcset|imagesrcset)="([^"]*)"/g, (_, a, v) => `${a}="${v.split(',').map((d) => pre(d.trim())).join(', ')}"`)
+    .replace(/url\((["']?)(\/[^)"']*)\1\)/g, (_, q, u) => `url(${q}${pre(u)}${q})`)
+    .replace(/"(start_url|src|apiPad)":\s*"(\/[^"]*)"/g, (_, k, u) => `"${k}":"${pre(u)}"`)
+    .replace(/(['"])\/api\//g, `$1${basisPad}/api/`);
+  for (const f of fs.readdirSync(DIST, { recursive: true }).map(String).filter((x) => /\.(html|css|js|webmanifest)$/.test(x))) {
+    const p = path.join(DIST, f);
+    fs.writeFileSync(p, herschrijf(fs.readFileSync(p, 'utf8')));
+  }
+}
+
 // ------------------------------------------------------------ Wisselen
 const oud = `${DOEL}-oud-${process.pid}`;
 for (let poging = 0; ; poging++) {

@@ -1,0 +1,53 @@
+# Previewsite op GitHub Pages: https://jelger1.github.io/de-wieetsjaf/
+# Bouwt de site bij elke push naar main (en elke ochtend, zodat agenda en seizoensaanbod actueel blijven)
+# en publiceert dist/ via GitHub Pages.
+# Vereist eenmalig: Settings > Pages > Build and deployment > Source: "GitHub Actions".
+#
+# Let op: dit is een PREVIEW. De pagina's blijven 'noindex' (SITE_ENV is niet 'productie'), dus Google neemt
+# ze niet op. GitHub Pages ondersteunt geen _headers, _redirects en serverfuncties: de bierkaart valt hier
+# terug op de officiële Untappd-embed. Voor de echte livegang: Cloudflare Pages (zie README).
+name: Preview op GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  bouwen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Site bouwen (niet indexeerbaar, in submap /de-wieetsjaf)
+        run: node scripts/build.mjs
+        env:
+          SITE_URL: https://jelger1.github.io/de-wieetsjaf
+          TZ: Europe/Amsterdam
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  publiceren:
+    needs: bouwen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

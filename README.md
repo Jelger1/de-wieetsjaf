@@ -56,6 +56,14 @@ npx playwright install chromium firefox webkit   # eenmalig
 npx playwright test             # 216 end-to-end tests in 5 browserprofielen (start zelf een server op :4322)
 ```
 
+## Preview online (GitHub Pages)
+
+Bij elke push naar `main` bouwt GitHub de site en zet hem op **https://jelger1.github.io/de-wieetsjaf/** (workflow `.github/workflows/github-pages.yml`). Eenmalig instellen: **Settings > Pages > Build and deployment > Source: GitHub Actions**.
+
+- De preview is openbaar voor wie de link heeft, maar **niet indexeerbaar** (`noindex` op elke pagina).
+- De site staat daar in een submap; de bouw zet `/de-wieetsjaf` automatisch voor alle interne paden (afgeleid uit `SITE_URL`).
+- GitHub Pages kent geen `_headers`, `_redirects` en serverfuncties. De bierkaart valt daar terug op de officiële Untappd-embed (na een klik). Voor de echte livegang blijft Cloudflare Pages het advies.
+
 ## Publiceren (advies: Cloudflare Pages)
 
 De site is statisch, op één kleine serverfunctie na (`/api/bierkaart`). Cloudflare Pages ondersteunt alles wat erin zit: `_headers` (CSP en cache), `_redirects` (316 redirects) en `functions/`.
