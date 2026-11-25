@@ -10,7 +10,8 @@ Het team werkt de bierkaart **alleen in Untappd for Business** bij. De website n
 
 - Het huidige account heeft **Untappd for Business**: de huidige site gebruikt de officiële iframe-embed `https://business.untappd.com/embeds/iframes/22030/83945`.
 - Uit het officiële embed-script blijkt: **22030 = location-ID**, **83945 = thema (embed-ontwerp)**. Het publieke venue-ID **685582** (`untappd.com/v/de-wieetsjaf/685582`) is een ander nummer.
-- Of het account **Premium** is (nodig voor de API) is **onbekend**. Dat bepaalt welke modus actief wordt.
+- Het account heeft **Premium** (bevestigd door de opdrachtgever op 25-11-2026), dus de API kan gebruikt worden. Nodig: een read-only token van de primaire gebruiker (zie ‘Toegang krijgen’ hieronder).
+- De oude site had **geen API-koppeling**: alleen de iframe hierboven. Er valt dus geen token of sleutel van de oude site over te nemen; die moet in het Untappd-dashboard worden aangemaakt.
 
 ## Architectuur
 

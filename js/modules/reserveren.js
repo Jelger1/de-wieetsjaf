@@ -60,18 +60,22 @@ export function initReserveren(config) {
     laatsteKnop = link;
     link.setAttribute('aria-busy', 'true');
     try {
+      const deadline = performance.now() + (g.maxWachttijdMs || 15000);
       await laadGuestplan(g);
       const open = await wachtOpMethode('openBookingWidget', g.wachttijdMs || 8000);
       const service = link.dataset.service;
-      // De widget opent pas als de restaurantgegevens binnen zijn; we proberen het een paar keer.
+      // De widget opent pas als de restaurantgegevens binnen zijn (bij een koude cache kan dat even duren);
+      // we proberen het tot de deadline. Lukt het niet, dan naar de directe link van precies deze dienst.
       let paneel = null;
-      for (let i = 0; i < 30 && !paneel; i++) {
+      while (!paneel && performance.now() < deadline) {
         open(service ? { serviceCode: service } : undefined);
-        await new Promise((r) => setTimeout(r, 250));
+        await new Promise((r) => setTimeout(r, 300));
         paneel = widgetPaneel();
       }
+      if (!paneel) throw new Error('widget opende niet');
       // Toetsenbordgebruikers direct in het reserveringsvenster zetten
-      paneel?.querySelector('button, [href], input, select, [tabindex]:not([tabindex="-1"])')?.focus();
+      if (paneel.tagName === 'IFRAME') paneel.focus();
+      else paneel.querySelector('button, [href], input, select, [tabindex]:not([tabindex="-1"])')?.focus();
       bewaakSluiten();
     } catch {
       terugval(link);
@@ -81,11 +85,14 @@ export function initReserveren(config) {
   });
 }
 
-/** Het zichtbare reserveringspaneel van Guestplan (in de shadow root van #gstpln-widget-host). */
+/** Het zichtbare reserveringspaneel van Guestplan: in de shadow root van #gstpln-widget-host (scriptmodus),
+ *  of het iframe [data-gstpln-widget-host] dat klikbaar wordt zodra het paneel open is (iframemodus). */
 function widgetPaneel() {
   const root = document.querySelector('#gstpln-widget-host')?.shadowRoot;
   const p = root?.querySelector('.gp-widget--body, [role="dialog"]');
-  return p && p.getClientRects().length ? p : null;
+  if (p && p.getClientRects().length) return p;
+  const frame = document.querySelector('iframe[data-gstpln-widget-host]');
+  return frame && frame.style.pointerEvents === 'auto' ? frame : null;
 }
 
 /** Zet de focus terug op de knop waarmee de widget werd geopend, zodra de widget sluit. */

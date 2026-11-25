@@ -18,7 +18,7 @@ Op volgorde van prioriteit. ✅ = de site is er al op voorbereid (alleen de gege
 | # | Punt | Wie |
 |---|---|---|
 | 7 | ✅ **Allergenen per gerecht**: de controlelijst laten invullen door de keuken | Keuken → `docs/allergenen-controlelijst.csv` |
-| 8 | ✅ **Untappd**: Premium-abonnement? Dan een read-only token, het menu-ID en het location-ID (zie 03) | Eigenaar |
+| 8 | ✅ **Untappd**: Premium is bevestigd (25-11-2026). Nog nodig: een **read-only API-token** van de primaire gebruiker, plus het e-mailadres van die gebruiker en het **menu-ID** van de bierkaart (stappen in 03, ‘Toegang krijgen’) | Eigenaar |
 | 9 | **Keukentijden**: is de keuken op maandag vanaf 12.00 open? Desserts tot 21.00 terwijl de keuken om 20.00 sluit? | Eigenaar |
 | 10 | ✅ **Nieuwsbriefdienst** kiezen (MailPoet werkt alleen met WordPress) en de 6.000 adressen met toestemmingsbewijs overzetten | Eigenaar / Pure Minds |
 | 11 | ✅ **Cadeaukaart**: GiveACard-shoplink en voorwaarden (herroepingsrecht, herroepingsknop) | Eigenaar |

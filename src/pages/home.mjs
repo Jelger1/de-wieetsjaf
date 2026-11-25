@@ -117,18 +117,19 @@ ${agenda.length ? html`
 </section>` : ''}
 
 ${seizoen ? html`
-<section class="seizoen donker" aria-labelledby="seizoen-titel">
-  ${picture(seizoen.afbeeldingen[0], { klasse: 'seizoen__foto', sizes: '100vw' })}
-  <div class="seizoen__band">
-    <img class="naadlogo seizoen__logo" src="/assets/images/logo-rond-128.png" srcset="/assets/images/logo-rond-128.webp 128w, /assets/images/logo-rond-256.webp 256w" sizes="7.5rem" width="128" height="128" alt="" loading="lazy">
-    <div class="container container--smal seizoen__tekst">
+<section class="seizoen naadblok donker" aria-labelledby="seizoen-titel">
+  ${picture(seizoen.afbeeldingen[0], { klasse: 'naadblok__foto', sizes: '(min-width: 60rem) 46vw, 100vw' })}
+  <div class="naadblok__band">
+    <img class="naadlogo naadblok__logo" src="/assets/images/logo-rond-128.png" srcset="/assets/images/logo-rond-128.webp 128w, /assets/images/logo-rond-256.webp 256w" sizes="7.5rem" width="128" height="128" alt="" loading="lazy">
+    <div class="container container--smal naadblok__tekst">
       <h2 id="seizoen-titel">${esc(seizoen.titel.split(' ').slice(0, 1).join(' '))}<br><span class="accent streep">${esc(seizoen.titel.split(' ').slice(1).join(' '))}</span></h2>
       <p class="ondertitel">${esc(seizoen.ondertitel)}</p>
       <p class="lead">${esc(seizoen.kort)}</p>
-      <div class="knoppen seizoen__knoppen">
-        ${reserveerKnop(ctx, { tekst: 'Reserveer een gondel', bron: 'home-seizoen' })}
-        <a class="knop knop--rand" href="/arrangementen/${seizoen.id}/">Zo werkt het</a>
+      <div class="knoppen naadblok__knoppen">
+        ${(seizoen.reserveren?.diensten ?? [{ label: 'Reserveer', service: seizoen.reserveren?.guestplanService }])
+          .map((d, i) => reserveerKnop(ctx, { tekst: d.label, klasse: i ? 'knop knop--rand' : 'knop', service: d.service, bron: `home-seizoen-${i}` }))}
       </div>
+      <a class="tekstlink seizoen__meer" href="/arrangementen/${seizoen.id}/">Zo werkt het: menu, tijden en aanbetaling</a>
     </div>
     <div class="seizoen__bergen" aria-hidden="true">${icoon('bergen', 'bergen')}</div>
   </div>

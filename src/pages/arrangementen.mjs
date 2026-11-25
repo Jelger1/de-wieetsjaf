@@ -56,16 +56,16 @@ export function paginas(ctx) {
     const feiten = a.feiten?.length ? `<dl class="feiten">${a.feiten.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>` : '';
     const inhoud = html`
 ${isGondel ? html`
-<section class="gondel-held donker">
-  ${picture(a.afbeeldingen[0], { klasse: 'gondel-held__foto', sizes: '100vw', laden: 'eager', prioriteit: true })}
-  <div class="gondel-held__band">
-    <img class="naadlogo gondel-held__logo" src="/assets/images/logo-rond-128.png" srcset="/assets/images/logo-rond-128.webp 128w, /assets/images/logo-rond-256.webp 256w" sizes="7.5rem" width="128" height="128" alt="">
-    <div class="container container--smal gondel-held__tekst">
+<section class="gondel-held naadblok donker">
+  ${picture(a.afbeeldingen[0], { klasse: 'naadblok__foto', sizes: '(min-width: 60rem) 46vw, 100vw', laden: 'eager', prioriteit: true })}
+  <div class="naadblok__band">
+    <img class="naadlogo naadblok__logo" src="/assets/images/logo-rond-128.png" srcset="/assets/images/logo-rond-128.webp 128w, /assets/images/logo-rond-256.webp 256w" sizes="7.5rem" width="128" height="128" alt="">
+    <div class="container container--smal naadblok__tekst">
       <nav class="kruimel" aria-label="Kruimelpad"><ol><li><a href="/">Home</a></li><li><a href="/arrangementen/">Arrangementen</a></li><li aria-current="page">${esc(a.titel)}</li></ol></nav>
       <h1>Alpine<br><span class="accent streep">Gondel Dining</span></h1>
       <p class="ondertitel">${esc(a.ondertitel)}</p>
       <p class="lead">${esc(a.kort)}</p>
-      <div class="knoppen" style="justify-content:center">${reserveer}</div>
+      <div class="knoppen naadblok__knoppen">${reserveer}</div>
     </div>
   </div>
 </section>` : paginakop(ctx, { titel: esc(a.titel), lead: esc(a.kort), kruimel })}

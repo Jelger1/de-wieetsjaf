@@ -10,7 +10,8 @@
       "locale": "nl",
       "directeLink": "https://guestplan.io/?i=9f563a2008503edff53d98bbf3704571d1bc31d9",
       "serviceLink": "https://widget.guestplan.com/?id={service}0{accessKey}&locale=nl",
-      "wachttijdMs": 8000
+      "wachttijdMs": 8000,
+      "maxWachttijdMs": 15000
     },
     "telefoonAlsTerugval": true
   },

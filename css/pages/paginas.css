@@ -39,12 +39,10 @@
 .gangen__oms { display: block; margin-top: 0.2rem; }
 
 /* Alpine Gondel Dining */
-.gondel-held { position: relative; }
-.gondel-held__foto img { width: 100%; height: clamp(20rem, 60vh, 44rem); object-fit: cover; object-position: 50% 68%; }
-.gondel-held__band { position: relative; text-align: center; padding: calc(clamp(5.5rem, 4rem + 4vw, 7.5rem) / 2 + var(--s-5)) 0 var(--s-8); }
-.gondel-held__logo { position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); }
-.gondel-held__tekst { display: grid; gap: var(--s-4); justify-items: center; }
+/* Gondel-held: naadblok (zie components.css) */
+.gondel-held .naadblok__band { padding-bottom: var(--s-6); }
 .gondel-held .kruimel ol { justify-content: center; }
+@media (min-width: 60rem) { .gondel-held .kruimel ol { justify-content: flex-start; } }
 .gondel-held .kruimel a, .gondel-held .kruimel li { color: rgb(245 230 197 / 0.85); }
 .gondel-held .kruimel li + li::before { color: rgb(245 230 197 / 0.5); }
 .gondel-held h1 { font-size: clamp(3rem, 2rem + 5vw, 6rem); }

@@ -21,8 +21,9 @@ Alles staat centraal in `data/integraties.json` → `reserveren.guestplan`.
    - `showFab: false`: geen zwevende knop over de site;
    - `open: false`: niet vanzelf openen;
    - `locale: 'nl'` en `color: '#11271B'` (bosgroen in plaats van het oude `#136813`).
-3. Daarna roept de knop `_gstpln.openBookingWidget()` aan (met `{ serviceCode }` bij arrangementen zoals het kerstmenu).
-4. **Terugval:** laadt het script niet binnen 8 seconden, of ontbreekt de methode, dan gaat de bezoeker naar de directe link. Bellen staat altijd vlak naast de knop.
+3. Daarna roept de knop `_gstpln.openBookingWidget()` aan (met `{ serviceCode }` bij arrangementen: kerstmenu `4MgTmJ4`, gondel avond `LzwJrAP`, gondel middag `8BFcwYf`). De `href` van zo’n knop is de directe dienstlink, bijvoorbeeld `https://widget.guestplan.com/?id=8BFcwYf0<accessKey>&locale=nl` (middag). Getest met de echte widget op 25-11-2026: de middagknop opent ‘Alpine Gondel Dining afternoon’ en de avondknop ‘Alpine Gondel Dining evening’ (niets ingevuld of gereserveerd).
+4. **Terugval:** laadt het script niet binnen 8 seconden (`wachttijdMs`), of verschijnt het paneel niet binnen 15 seconden na de klik (`maxWachttijdMs`, bijv. bij een koude cache van de ±3 MB-bundel), dan gaat de bezoeker naar de `href` van de knop: de directe link van precies die dienst. Bellen staat altijd vlak naast de knop.
+   Het laadscript van Guestplan kent sinds kort ook een iframemodus (`iframe[data-gstpln-widget-host]`). Ons account laadt nu in scriptmodus, maar `reserveren.js` herkent beide.
 5. **Focus:** het venster van Guestplan is een zijpaneel (geen modale dialoog) in een shadow root. Na openen zet de site de focus op het eerste bedienbare element in het paneel; na sluiten gaat de focus terug naar de knop waarmee het werd geopend.
 
 Waarom pas bij een klik: de Guestplan-bundel is ±3 MB en laadt ook Stripe, dat cookies plaatst (zie `04-juridische-audit.md`). Op de oude site gebeurde dat bij elk bezoek.

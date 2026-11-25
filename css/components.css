@@ -64,6 +64,29 @@
 .naadlogo { width: clamp(5.5rem, 4rem + 4vw, 7.5rem); aspect-ratio: 1; position: relative; z-index: 2; }
 .naadlogo img { width: 100%; height: 100%; }
 
+/* Naadblok: staande foto + groene band met het ronde logo op de naad (zoals de Instagram-posts).
+   Foto's blijven in verhouding: nooit een staande foto tot een brede strook oprekken.
+   Mobiel/tablet: foto boven (4:5, vanaf 40rem 5:4), naad horizontaal, tekst gecentreerd.
+   Vanaf 60rem: foto links over de volle hoogte, tekst rechts, logo op de verticale naad. */
+.naadblok { position: relative; display: grid; }
+.naadblok__foto { display: block; }
+.naadblok__foto img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 62%; }
+@media (min-width: 40rem) { .naadblok__foto img { aspect-ratio: 5 / 4; } }
+.naadblok__band { position: relative; display: flex; flex-direction: column; padding-top: calc(clamp(5.5rem, 4rem + 4vw, 7.5rem) / 2 + var(--s-5)); text-align: center; }
+.naadblok__logo { position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); }
+.naadblok__tekst { display: grid; gap: var(--s-4); justify-items: center; padding-bottom: var(--s-6); }
+.naadblok__tekst .lead { max-width: 36rem; }
+.naadblok__knoppen { justify-content: center; margin-top: var(--s-3); }
+@media (min-width: 60rem) {
+  .naadblok { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); min-height: clamp(36rem, 44vw, 46rem); }
+  .naadblok__foto { position: relative; }
+  .naadblok__foto img { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+  .naadblok__band { padding-top: var(--s-9); text-align: left; }
+  .naadblok__logo { left: 0; top: 50%; }
+  .naadblok__tekst { justify-items: start; margin: auto 0; max-width: 46rem; padding-inline: clamp(5.5rem, 7vw, 8rem) clamp(2rem, 5vw, 6rem); }
+  .naadblok__knoppen { justify-content: flex-start; }
+}
+
 /* --------------------------------------------------------------- Foto’s */
 .foto { position: relative; overflow: hidden; background: var(--c-paneel); }
 .foto img { width: 100%; height: 100%; object-fit: cover; }

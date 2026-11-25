@@ -8,7 +8,9 @@ export const root = ROOT;
 
 export const esc = (s) => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-  .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  .replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+  // Typografie: '€ 49,50' en '4 p.p.' nooit over twee regels laten breken.
+  .replace(/€ (?=\d)/g, '€ ').replace(/(\d) (p\.p\.)/g, '$1 $2');
 
 /** Template-tag die ingevoegde waarden NIET escapet (gebruik esc() expliciet). Voegt arrays samen. */
 export const html = (strings, ...vals) => strings.reduce((out, s, i) => {
@@ -25,7 +27,7 @@ export function fmtPrijs(n) {
   if (Number.isInteger(n)) return `${n},-`;
   return n.toFixed(2).replace('.', ',');
 }
-export const fmtEuro = (n) => `€ ${Number.isInteger(n) ? `${n},-` : n.toFixed(2).replace('.', ',')}`;
+export const fmtEuro = (n) => `€ ${Number.isInteger(n) ? `${n},-` : n.toFixed(2).replace('.', ',')}`;
 
 const MAANDEN = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
 const MAANDEN_KORT = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
